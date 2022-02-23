@@ -4,7 +4,7 @@ from utils.log import Logger
 from utils.test import TestRunner, TestStatus, load_testcases
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-l", "--libos", action="store_true", help="test on libos mode")
+parser.add_argument("-l", "--libos", action="store_true", help="test on libos mode (otherwise bare-metal mode)")
 parser.add_argument("-f", "--fast", action="store_true", help="do not test known failed and timeout testcases")
 parser.add_argument("-t", "--test", help="run only one test")
 args = parser.parse_args()
