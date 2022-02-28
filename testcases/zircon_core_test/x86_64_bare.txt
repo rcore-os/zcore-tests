@@ -114,7 +114,7 @@ ExecutableTlsTest.AlignmentInitializerInThread                                  
 ExecutableTlsTest.AlignmentInitializierInMain                                                       OK
 ExecutableTlsTest.ArrayInitializerInMain                                                            OK
 ExecutableTlsTest.ArrayInitializerInThread                                                          OK
-ExecutableTlsTest.ArrayInitializerSpamThread                                                        OK
+ExecutableTlsTest.ArrayInitializerSpamThread                                                        PARTIAL
 ExecutableTlsTest.ArrayInitializierSpamMain                                                         OK
 ExecutableTlsTest.BasicInitalizersInMain                                                            OK
 ExecutableTlsTest.BasicInitalizersInThread                                                          OK

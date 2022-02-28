@@ -42,7 +42,7 @@ ChannelTest.CallWrittenBytesSmallerThanZxTxIdReturnsInvalidArgs                 
 ChannelTest.CloseClearsSignalsWriteable                                                             OK
 ChannelTest.CloseSignalsPeerClosed                                                                  OK
 ChannelTest.CloseSignalsPeerReturnsPeerClosed                                                       OK
-ChannelTest.ConcurrentReadsConsumeUniqueElements                                                    OK
+ChannelTest.ConcurrentReadsConsumeUniqueElements                                                    PARTIAL
 ChannelTest.CreateIsOkAndEndpointsAreRelated                                                        OK
 ChannelTest.IsWriteableByDefault                                                                    OK
 ChannelTest.NestingIsOk                                                                             OK

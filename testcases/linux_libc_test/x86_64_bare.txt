@@ -337,7 +337,7 @@
 /libc-test/src/math/y1.exe                                                      OK
 /libc-test/src/math/y1f.exe                                                     OK
 /libc-test/src/math/yn.exe                                                      OK
-/libc-test/src/math/ynf.exe                                                     OK
+/libc-test/src/math/ynf.exe                                                     FAILED
 /libc-test/src/musl/pleval-static.exe                                           OK
 /libc-test/src/regression/daemon-failure-static.exe                             OK
 /libc-test/src/regression/daemon-failure.exe                                    OK
@@ -413,14 +413,14 @@
 /libc-test/src/regression/pthread_condattr_setclock.exe                         TIMEOUT
 /libc-test/src/regression/pthread_create-oom-static.exe                         FAILED
 /libc-test/src/regression/pthread_create-oom.exe                                FAILED
-/libc-test/src/regression/pthread_exit-cancel-static.exe                        OK
-/libc-test/src/regression/pthread_exit-cancel.exe                               OK
+/libc-test/src/regression/pthread_exit-cancel-static.exe                        PARTIAL
+/libc-test/src/regression/pthread_exit-cancel.exe                               PARTIAL
 /libc-test/src/regression/pthread_exit-dtor-static.exe                          FAILED
 /libc-test/src/regression/pthread_exit-dtor.exe                                 FAILED
 /libc-test/src/regression/pthread_once-deadlock-static.exe                      PARTIAL
 /libc-test/src/regression/pthread_once-deadlock.exe                             PARTIAL
-/libc-test/src/regression/pthread_rwlock-ebusy-static.exe                       OK
-/libc-test/src/regression/pthread_rwlock-ebusy.exe                              OK
+/libc-test/src/regression/pthread_rwlock-ebusy-static.exe                       PARTIAL
+/libc-test/src/regression/pthread_rwlock-ebusy.exe                              PARTIAL
 /libc-test/src/regression/putenv-doublefree-static.exe                          OK
 /libc-test/src/regression/putenv-doublefree.exe                                 OK
 /libc-test/src/regression/raise-race-static.exe                                 TIMEOUT

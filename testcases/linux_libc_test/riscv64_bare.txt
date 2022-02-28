@@ -498,7 +498,7 @@
 /oscomp/execve                                                                  OK
 /oscomp/exit                                                                    FAILED
 /oscomp/fork                                                                    FAILED
-/oscomp/fstat                                                                   OK
+/oscomp/fstat                                                                   FAILED
 /oscomp/getcwd                                                                  OK
 /oscomp/getdents                                                                OK
 /oscomp/getpid                                                                  OK
@@ -506,12 +506,12 @@
 /oscomp/gettimeofday                                                            OK
 /oscomp/mkdir_                                                                  OK
 /oscomp/mmap                                                                    OK
-/oscomp/mount                                                                   OK
-/oscomp/munmap                                                                  OK
-/oscomp/open                                                                    OK
-/oscomp/openat                                                                  OK
+/oscomp/mount                                                                   FAILED
+/oscomp/munmap                                                                  FAILED
+/oscomp/open                                                                    FAILED
+/oscomp/openat                                                                  FAILED
 /oscomp/pipe                                                                    OK
-/oscomp/read                                                                    OK
+/oscomp/read                                                                    FAILED
 /oscomp/sleep                                                                   OK
 /oscomp/test_echo                                                               OK
 /oscomp/times                                                                   OK
