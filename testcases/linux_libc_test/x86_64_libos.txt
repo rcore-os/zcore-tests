@@ -36,7 +36,7 @@
 /libc-test/src/functional/sem_open.exe                                          FAILED
 /libc-test/src/functional/setjmp.exe                                            OK
 /libc-test/src/functional/snprintf.exe                                          OK
-/libc-test/src/functional/socket.exe                                            FAILED
+/libc-test/src/functional/socket.exe                                            OK
 /libc-test/src/functional/spawn.exe                                             FAILED
 /libc-test/src/functional/sscanf.exe                                            OK
 /libc-test/src/functional/sscanf_long.exe                                       OK
@@ -279,8 +279,8 @@
 /libc-test/src/regression/flockfile-list.exe                                    OK
 /libc-test/src/regression/fpclassify-invalid-ld80.exe                           OK
 /libc-test/src/regression/ftello-unflushed-append.exe                           OK
-/libc-test/src/regression/getpwnam_r-crash.exe                                  FAILED
-/libc-test/src/regression/getpwnam_r-errno.exe                                  FAILED
+/libc-test/src/regression/getpwnam_r-crash.exe                                  OK
+/libc-test/src/regression/getpwnam_r-errno.exe                                  OK
 /libc-test/src/regression/iconv-roundtrips.exe                                  OK
 /libc-test/src/regression/inet_ntop-v4mapped.exe                                OK
 /libc-test/src/regression/inet_pton-empty-last-field.exe                        OK

@@ -73,8 +73,8 @@
 /libc-test/src/functional/setjmp.exe                                            OK
 /libc-test/src/functional/snprintf-static.exe                                   OK
 /libc-test/src/functional/snprintf.exe                                          OK
-/libc-test/src/functional/socket-static.exe                                     FAILED
-/libc-test/src/functional/socket.exe                                            FAILED
+/libc-test/src/functional/socket-static.exe                                     OK
+/libc-test/src/functional/socket.exe                                            OK
 /libc-test/src/functional/spawn-static.exe                                      FAILED
 /libc-test/src/functional/spawn.exe                                             FAILED
 /libc-test/src/functional/sscanf-static.exe                                     OK
@@ -345,8 +345,8 @@
 /libc-test/src/regression/dn_expand-empty.exe                                   OK
 /libc-test/src/regression/dn_expand-ptr-0-static.exe                            OK
 /libc-test/src/regression/dn_expand-ptr-0.exe                                   OK
-/libc-test/src/regression/execle-env-static.exe                                 TIMEOUT
-/libc-test/src/regression/execle-env.exe                                        TIMEOUT
+/libc-test/src/regression/execle-env-static.exe                                 OK
+/libc-test/src/regression/execle-env.exe                                        OK
 /libc-test/src/regression/fflush-exit-static.exe                                OK
 /libc-test/src/regression/fflush-exit.exe                                       OK
 /libc-test/src/regression/fgets-eof-static.exe                                  OK
