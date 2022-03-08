@@ -489,7 +489,7 @@ ProfileTest.CreateProfileWithNoProfileInfoIsInvalidArgs                         
 ProfileTest.CreateProfileWithNullProfileIsInvalidArgs                                               FAILED
 ProgressiveCloneDiscardTests.ProgressiveCloneClose                                                  OK
 ProgressiveCloneDiscardTests.ProgressiveCloneTruncate                                               OK
-Pthread.Basic                                                                                       OK
+Pthread.Basic                                                                                       TIMEOUT
 Pthread.BigStackSize                                                                                OK
 Pthread.GetstackMainThread                                                                          OK
 Pthread.GetstackOtherThread                                                                         OK

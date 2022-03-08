@@ -88,8 +88,8 @@
 /libc-test/functional/setjmp.exe                                                OK
 /libc-test/functional/snprintf-static.exe                                       OK
 /libc-test/functional/snprintf.exe                                              OK
-/libc-test/functional/socket-static.exe                                         FAILED
-/libc-test/functional/socket.exe                                                FAILED
+/libc-test/functional/socket-static.exe                                         OK
+/libc-test/functional/socket.exe                                                OK
 /libc-test/functional/spawn-static.exe                                          TIMEOUT
 /libc-test/functional/spawn.exe                                                 TIMEOUT
 /libc-test/functional/sscanf-static.exe                                         OK
@@ -146,8 +146,8 @@
 /libc-test/functional/udiv.exe                                                  OK
 /libc-test/functional/ungetc-static.exe                                         OK
 /libc-test/functional/ungetc.exe                                                OK
-/libc-test/functional/utime-static.exe                                          FAILED
-/libc-test/functional/utime.exe                                                 FAILED
+/libc-test/functional/utime-static.exe                                          OK
+/libc-test/functional/utime.exe                                                 OK
 /libc-test/functional/vfork-static.exe                                          FAILED
 /libc-test/functional/vfork.exe                                                 FAILED
 /libc-test/functional/wcsstr-static.exe                                         OK
@@ -496,8 +496,8 @@
 /oscomp/dup                                                                     OK
 /oscomp/dup2                                                                    OK
 /oscomp/execve                                                                  OK
-/oscomp/exit                                                                    FAILED
-/oscomp/fork                                                                    FAILED
+/oscomp/exit                                                                    OK
+/oscomp/fork                                                                    OK
 /oscomp/fstat                                                                   FAILED
 /oscomp/getcwd                                                                  OK
 /oscomp/getdents                                                                OK
@@ -518,7 +518,7 @@
 /oscomp/umount                                                                  OK
 /oscomp/uname                                                                   OK
 /oscomp/unlink                                                                  OK
-/oscomp/wait                                                                    FAILED
+/oscomp/wait                                                                    OK
 /oscomp/waitpid                                                                 FAILED
 /oscomp/write                                                                   OK
 /oscomp/yield                                                                   OK

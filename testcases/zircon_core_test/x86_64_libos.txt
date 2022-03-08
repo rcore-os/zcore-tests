@@ -22,7 +22,7 @@ C11ThreadTest.CreateAndVerifyThreadHandle                                       
 C11ThreadTest.DetachedThreadKeepsRunning                                                            OK
 C11ThreadTest.LongNameSucceeds                                                                      OK
 C11ThreadTest.NullNameThreadShouldSucceed                                                           OK
-C11ThreadTest.SelfDetachAndFree                                                                     OK
+C11ThreadTest.SelfDetachAndFree                                                                     PARTIAL
 C11ThreadTest.ThreadLocalErrno                                                                      OK
 ChannelInternalTest.CallFinishWithoutPreviouslyCallingCallReturnsBadState                           FAILED
 ChannelInternalTest.TransferChannelWithPendingCallInSourceProcess                                   OK
