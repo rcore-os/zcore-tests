@@ -345,8 +345,8 @@
 /libc-test/src/regression/dn_expand-empty.exe                                   OK
 /libc-test/src/regression/dn_expand-ptr-0-static.exe                            OK
 /libc-test/src/regression/dn_expand-ptr-0.exe                                   OK
-/libc-test/src/regression/execle-env-static.exe                                 OK
-/libc-test/src/regression/execle-env.exe                                        OK
+/libc-test/src/regression/execle-env-static.exe                                 FAILED
+/libc-test/src/regression/execle-env.exe                                        FAILED
 /libc-test/src/regression/fflush-exit-static.exe                                OK
 /libc-test/src/regression/fflush-exit.exe                                       OK
 /libc-test/src/regression/fgets-eof-static.exe                                  OK
