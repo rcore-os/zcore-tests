@@ -7,6 +7,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-l", "--libos", action="store_true", help="test on libos mode (otherwise bare-metal mode)")
 parser.add_argument("-f", "--fast", action="store_true", help="do not test known failed and timeout testcases")
 parser.add_argument("-t", "--test", help="run only one test")
+parser.add_argument("--no-failed", action="store_true", help="exit with calling exit(0), never call exit(-1)")
 args = parser.parse_args()
 
 
@@ -63,7 +64,7 @@ if __name__ == "__main__":
         testcases = load_testcases(TEST_FILE)
         ok = runner.run_all(testcases, args.fast, TIMEOUT)
 
-    if not ok:
+    if not ok and not args.no_failed:
         sys.exit(-1)
     else:
         sys.exit(0)
