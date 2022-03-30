@@ -501,12 +501,12 @@ Resource.CreateResourceSlice                                                    
 Resource.ExclusiveShared                                                                            FAILED
 Resource.InvalidArgs                                                                                FAILED
 Resource.Ioports                                                                                    FAILED
-Resource.ProbeAddressSpace                                                                          FAILED
+Resource.ProbeAddressSpace                                                                          OK
 Resource.SharedExclusive                                                                            FAILED
-Resource.VmoCreation                                                                                FAILED
+Resource.VmoCreation                                                                                OK
 Resource.VmoCreationSmaller                                                                         FAILED
 Resource.VmoCreationUnaligned                                                                       FAILED
-Resource.VmoReplaceAsExecutable                                                                     FAILED
+Resource.VmoReplaceAsExecutable                                                                     OK
 SchedulerProfileTest.CreateProfileOnNonRootJobIsAccessDenied                                        FAILED
 SchedulerProfileTest.CreateProfileWithDeadlineBelowCapacityIsInvalidArgs                            FAILED
 SchedulerProfileTest.CreateProfileWithDeadlineIsOk                                                  FAILED

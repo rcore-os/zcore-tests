@@ -476,8 +476,8 @@
 /libc-test/regression/sigreturn.exe                                             FAILED
 /libc-test/regression/sscanf-eof-static.exe                                     OK
 /libc-test/regression/sscanf-eof.exe                                            OK
-/libc-test/regression/statvfs-static.exe                                        FAILED
-/libc-test/regression/statvfs.exe                                               FAILED
+/libc-test/regression/statvfs-static.exe                                        OK
+/libc-test/regression/statvfs.exe                                               OK
 /libc-test/regression/strverscmp-static.exe                                     OK
 /libc-test/regression/strverscmp.exe                                            OK
 /libc-test/regression/syscall-sign-extend-static.exe                            OK

@@ -66,7 +66,7 @@
 /libc-test/src/functional/tls_local_exec.exe                                    OK
 /libc-test/src/functional/udiv.exe                                              OK
 /libc-test/src/functional/ungetc.exe                                            OK
-/libc-test/src/functional/utime.exe                                             FAILED
+/libc-test/src/functional/utime.exe                                             OK
 /libc-test/src/functional/vfork.exe                                             FAILED
 /libc-test/src/functional/wcsstr.exe                                            OK
 /libc-test/src/functional/wcstol.exe                                            OK
@@ -330,7 +330,7 @@
 /libc-test/src/regression/sigprocmask-internal.exe                              OK
 /libc-test/src/regression/sigreturn.exe                                         FAILED
 /libc-test/src/regression/sscanf-eof.exe                                        OK
-/libc-test/src/regression/statvfs.exe                                           FAILED
+/libc-test/src/regression/statvfs.exe                                           OK
 /libc-test/src/regression/strverscmp.exe                                        OK
 /libc-test/src/regression/syscall-sign-extend.exe                               OK
 /libc-test/src/regression/tls_get_new-dtv.exe                                   OK
