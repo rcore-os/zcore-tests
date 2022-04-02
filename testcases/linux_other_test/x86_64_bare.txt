@@ -1,0 +1,16 @@
+/bin/busybox?cal                                                                OK
+/bin/busybox?clear                                                              OK
+/bin/busybox?date                                                               OK
+/bin/busybox?df                                                                 FAILED
+/bin/busybox?dmesg                                                              FAILED
+/bin/busybox?du                                                                 OK
+/bin/busybox?false                                                              FAILED
+/bin/busybox?free                                                               FAILED
+/bin/busybox?hwclock                                                            FAILED
+/bin/busybox?ls                                                                 OK
+/bin/busybox?ps                                                                 FAILED
+/bin/busybox?pwd                                                                OK
+/bin/busybox?true                                                               OK
+/bin/busybox?uname                                                              OK
+/bin/busybox?uptime                                                             OK
+/bin/busybox?sh?-c?ls                                                           OK
