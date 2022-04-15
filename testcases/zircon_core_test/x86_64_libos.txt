@@ -104,7 +104,7 @@ DefaultExceptionHandlerTest.UnhandledHardwareException                          
 DefaultExceptionHandlerTest.UnhandledPolicyException                                                FAILED
 EventPairTest.CheckNoFlagsSupported                                                                 OK
 EventPairTest.HandleRightsAreCorrect                                                                OK
-EventPairTest.HandlesNotInvalid                                                                     OK
+EventPairTest.HandlesNotInvalid                                                                     FAILED
 EventPairTest.KoidsAreCorrect                                                                       OK
 EventPairTest.SignalEventPairAndClearVerifySignals                                                  OK
 EventPairTest.SignalPeerAndVerifyRecived                                                            OK
@@ -125,7 +125,7 @@ ExecutableTlsTest.StructureInitializerInThread                                  
 FPUTest.LongComputeLoop                                                                             OK
 FifoTest.DequeueSignalsWriteable                                                                    OK
 FifoTest.EmptyQueueReturnsErrShouldWait                                                             OK
-FifoTest.EndpointCloseSignalsPeerClosed                                                             OK
+FifoTest.EndpointCloseSignalsPeerClosed                                                             FAILED
 FifoTest.EndpointsAreRelated                                                                        OK
 FifoTest.FifoOrderIsPreserved                                                                       OK
 FifoTest.IndividualReadsPreserveOrder                                                               OK
@@ -161,7 +161,7 @@ HandleTransferTest.CancelsWait                                                  
 HandleTransferTest.OverChannelThenRead                                                              OK
 HandleWaitTest.HandleWaitMultipleThreads                                                            PARTIAL
 HandleWaitTest.HandleWaitTest                                                                       OK
-InterruptTest.BindPort                                                                              OK
+InterruptTest.BindPort                                                                              FAILED
 InterruptTest.BindTriggeredIrqToPort                                                                TIMEOUT
 InterruptTest.NonBindablePort                                                                       OK
 InterruptTest.NullOutputTimestamp                                                                   OK
@@ -358,7 +358,7 @@ Pager.VmarRemapTest                                                             
 Pager.VmarUnmapTest                                                                                 FAILED
 Pager.VmoInfoPagerTest                                                                              FAILED
 Pager.WritingZeroFork                                                                               FAILED
-PortStressTest.CloseWaitRace                                                                        OK
+PortStressTest.CloseWaitRace                                                                        FAILED
 PortStressTest.SignalCloseWait                                                                      FAILED
 PortStressTest.WaitSignalCancel                                                                     TIMEOUT
 PortTest.AsyncWaitChannel                                                                           OK
@@ -614,7 +614,7 @@ ThreadGetInfoTest.InfoHandleCountBadActualgIsInvalidArg                         
 ThreadGetInfoTest.InfoHandleCountBadAvailIsInvalidArg                                               OK
 ThreadGetInfoTest.InfoHandleCountInvalidBufferPointerFails                                          OK
 ThreadGetInfoTest.InfoHandleCountInvalidHandleFails                                                 OK
-ThreadGetInfoTest.InfoHandleCountNullActualAndAvailSucceeds                                         OK
+ThreadGetInfoTest.InfoHandleCountNullActualAndAvailSucceeds                                         FAILED
 ThreadGetInfoTest.InfoHandleCountNullActualSucceeds                                                 OK
 ThreadGetInfoTest.InfoHandleCountNullAvailSucceeds                                                  OK
 ThreadGetInfoTest.InfoHandleCountOnSelfSuceeds                                                      OK
@@ -649,7 +649,7 @@ Threads.EmptyNameSucceeds                                                       
 Threads.GetAffinity                                                                                 FAILED
 Threads.GetInfoRuntime                                                                              FAILED
 Threads.GetLastScheduledCpu                                                                         FAILED
-Threads.InfoTaskStatsFails                                                                          OK
+Threads.InfoTaskStatsFails                                                                          FAILED
 Threads.InfoThreadStatsFails                                                                        FAILED
 Threads.InvalidRights                                                                               OK
 Threads.KillSuspendedThread                                                                         TIMEOUT

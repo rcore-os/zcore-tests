@@ -326,7 +326,7 @@
 /libc-test/src/regression/sem_close-unmap.exe                                   FAILED
 /libc-test/src/regression/setenv-oom.exe                                        FAILED
 /libc-test/src/regression/setvbuf-unget.exe                                     OK
-/libc-test/src/regression/sigaltstack.exe                                       OK
+/libc-test/src/regression/sigaltstack.exe                                       FAILED
 /libc-test/src/regression/sigprocmask-internal.exe                              OK
 /libc-test/src/regression/sigreturn.exe                                         FAILED
 /libc-test/src/regression/sscanf-eof.exe                                        OK
