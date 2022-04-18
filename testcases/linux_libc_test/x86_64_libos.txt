@@ -301,7 +301,7 @@
 /libc-test/src/regression/printf-fmt-n.exe                                      OK
 /libc-test/src/regression/pthread-robust-detach.exe                             FAILED
 /libc-test/src/regression/pthread_atfork-errno-clobber.exe                      FAILED
-/libc-test/src/regression/pthread_cancel-sem_wait.exe                           OK
+/libc-test/src/regression/pthread_cancel-sem_wait.exe                           FAILED
 /libc-test/src/regression/pthread_cond-smasher.exe                              TIMEOUT
 /libc-test/src/regression/pthread_cond_wait-cancel_ignored.exe                  TIMEOUT
 /libc-test/src/regression/pthread_condattr_setclock.exe                         TIMEOUT
