@@ -37,8 +37,8 @@
 /libc-test/src/functional/mbc.exe                                                   OK
 /libc-test/src/functional/memstream-static.exe                                      OK
 /libc-test/src/functional/memstream.exe                                             OK
-/libc-test/src/functional/popen-static.exe                                          OK
-/libc-test/src/functional/popen.exe                                                 OK
+/libc-test/src/functional/popen-static.exe                                          TIMEOUT
+/libc-test/src/functional/popen.exe                                                 TIMEOUT
 /libc-test/src/functional/pthread_cancel-points-static.exe                          OK
 /libc-test/src/functional/pthread_cancel-points.exe                                 OK
 /libc-test/src/functional/pthread_cancel-static.exe                                 OK
@@ -415,8 +415,8 @@
 /libc-test/src/regression/pthread_create-oom.exe                                    FAILED
 /libc-test/src/regression/pthread_exit-cancel-static.exe                            OK
 /libc-test/src/regression/pthread_exit-cancel.exe                                   OK
-/libc-test/src/regression/pthread_exit-dtor-static.exe                              OK
-/libc-test/src/regression/pthread_exit-dtor.exe                                     OK
+/libc-test/src/regression/pthread_exit-dtor-static.exe                              FAILED
+/libc-test/src/regression/pthread_exit-dtor.exe                                     FAILED
 /libc-test/src/regression/pthread_once-deadlock-static.exe                          OK
 /libc-test/src/regression/pthread_once-deadlock.exe                                 OK
 /libc-test/src/regression/pthread_rwlock-ebusy-static.exe                           OK
