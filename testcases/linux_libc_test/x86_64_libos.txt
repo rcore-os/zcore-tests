@@ -21,10 +21,10 @@
 /libc-test/src/functional/popen.exe                                             FAILED
 /libc-test/src/functional/pthread_cancel-points.exe                             FAILED
 /libc-test/src/functional/pthread_cancel.exe                                    TIMEOUT
-/libc-test/src/functional/pthread_cond.exe                                      TIMEOUT
+/libc-test/src/functional/pthread_cond.exe                                      OK
 /libc-test/src/functional/pthread_mutex.exe                                     TIMEOUT
 /libc-test/src/functional/pthread_mutex_pi.exe                                  TIMEOUT
-/libc-test/src/functional/pthread_robust.exe                                    FAILED
+/libc-test/src/functional/pthread_robust.exe                                    PARTIAL
 /libc-test/src/functional/pthread_tsd.exe                                       OK
 /libc-test/src/functional/qsort.exe                                             OK
 /libc-test/src/functional/random.exe                                            OK
@@ -49,7 +49,7 @@
 /libc-test/src/functional/string_strchr.exe                                     OK
 /libc-test/src/functional/string_strcspn.exe                                    OK
 /libc-test/src/functional/string_strstr.exe                                     OK
-/libc-test/src/functional/strptime.exe                                          FAILED
+/libc-test/src/functional/strptime.exe                                          OK
 /libc-test/src/functional/strtod.exe                                            OK
 /libc-test/src/functional/strtod_long.exe                                       TIMEOUT
 /libc-test/src/functional/strtod_simple.exe                                     OK
@@ -302,9 +302,9 @@
 /libc-test/src/regression/pthread-robust-detach.exe                             FAILED
 /libc-test/src/regression/pthread_atfork-errno-clobber.exe                      FAILED
 /libc-test/src/regression/pthread_cancel-sem_wait.exe                           FAILED
-/libc-test/src/regression/pthread_cond-smasher.exe                              TIMEOUT
+/libc-test/src/regression/pthread_cond-smasher.exe                              OK
 /libc-test/src/regression/pthread_cond_wait-cancel_ignored.exe                  TIMEOUT
-/libc-test/src/regression/pthread_condattr_setclock.exe                         TIMEOUT
+/libc-test/src/regression/pthread_condattr_setclock.exe                         OK
 /libc-test/src/regression/pthread_create-oom.exe                                FAILED
 /libc-test/src/regression/pthread_exit-cancel.exe                               OK
 /libc-test/src/regression/pthread_exit-dtor.exe                                 FAILED
