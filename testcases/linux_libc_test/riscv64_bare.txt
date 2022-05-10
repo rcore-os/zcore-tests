@@ -404,7 +404,7 @@
 /libc-test/src/regression/pthread_atfork-errno-clobber-static.exe                   FAILED
 /libc-test/src/regression/pthread_atfork-errno-clobber.exe                          FAILED
 /libc-test/src/regression/pthread_cancel-sem_wait-static.exe                        OK
-/libc-test/src/regression/pthread_cancel-sem_wait.exe                               OK
+/libc-test/src/regression/pthread_cancel-sem_wait.exe                               PARTIAL 
 /libc-test/src/regression/pthread_cond-smasher-static.exe                           OK
 /libc-test/src/regression/pthread_cond-smasher.exe                                  OK
 /libc-test/src/regression/pthread_cond_wait-cancel_ignored-static.exe               TIMEOUT

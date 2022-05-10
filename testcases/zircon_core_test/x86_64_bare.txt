@@ -8,7 +8,7 @@ Bti.Clone                                                                       
 Bti.Create                                                                                          OK
 Bti.DecommitRace                                                                                    FAILED
 Bti.GetInfoTest                                                                                     OK
-Bti.NoDelayedUnpin                                                                                  OK
+Bti.NoDelayedUnpin                                                                                  PARTIAL 
 Bti.Pin                                                                                             OK
 Bti.PinContigFlag                                                                                   OK
 Bti.PinContiguous                                                                                   OK

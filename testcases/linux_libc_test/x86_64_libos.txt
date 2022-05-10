@@ -61,7 +61,7 @@
 /libc-test/src/functional/time.exe                                              OK
 /libc-test/src/functional/tls_align.exe                                         FAILED
 /libc-test/src/functional/tls_align_dlopen.exe                                  FAILED
-/libc-test/src/functional/tls_init.exe                                          OK
+/libc-test/src/functional/tls_init.exe                                          PARTIAL 
 /libc-test/src/functional/tls_init_dlopen.exe                                   TIMEOUT
 /libc-test/src/functional/tls_local_exec.exe                                    OK
 /libc-test/src/functional/udiv.exe                                              OK

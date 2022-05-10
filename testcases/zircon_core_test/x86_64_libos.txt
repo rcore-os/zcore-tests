@@ -134,7 +134,7 @@ FifoTest.PartialWriteQueuesElementsThatFit                                      
 FifoTest.ReadAndWriteValidatesSizeAndElementCount                                                   OK
 FutexTest.EventSignaling                                                                            PARTIAL
 FutexTest.MisalignedFutextAddr                                                                      OK
-FutexTest.Requeue                                                                                   OK
+FutexTest.Requeue                                                                                   PARTIAL 
 FutexTest.RequeueSameAddr                                                                           OK
 FutexTest.RequeueUnqueuedOnTimeout                                                                  FAILED
 FutexTest.RequeueValueMismatch                                                                      OK

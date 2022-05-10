@@ -467,7 +467,7 @@
 /libc-test/src/regression/strverscmp.exe                                        OK
 /libc-test/src/regression/syscall-sign-extend-static.exe                        OK
 /libc-test/src/regression/syscall-sign-extend.exe                               OK
-/libc-test/src/regression/tls_get_new-dtv.exe                                   OK
+/libc-test/src/regression/tls_get_new-dtv.exe                                   PARTIAL 
 /libc-test/src/regression/uselocale-0-static.exe                                OK
 /libc-test/src/regression/uselocale-0.exe                                       OK
 /libc-test/src/regression/wcsncpy-read-overflow-static.exe                      OK
