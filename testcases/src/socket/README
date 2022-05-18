@@ -1,0 +1,10 @@
+# Test TCP/UDP socket
+# TCP, IP: 192.168.0.123, Port: 6979
+# UDP, IP: 192.168.0.123, Port: 6969
+
+# Build test cases
+cp *.c libc-test/src/functional/
+
+# From libc-test/src/functional/socket.c
+# cd libc-test/
+# musl-gcc -Isrc/common -Isrc/common -pipe -std=c99 -D_POSIX_C_SOURCE=200809L -Wall -Wno-unused-function -Wno-missing-braces -Wno-unused -Wno-overflow -Wno-unknown-pragmas -fno-builtin -frounding-math -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith -g -D_FILE_OFFSET_BITS=64  -c -o src/functional/socket.o src/functional/socket.c
