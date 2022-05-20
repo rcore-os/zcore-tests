@@ -49,8 +49,8 @@
 /libc-test/src/functional/pthread_mutex.exe                                         TIMEOUT
 /libc-test/src/functional/pthread_mutex_pi-static.exe                               TIMEOUT
 /libc-test/src/functional/pthread_mutex_pi.exe                                      TIMEOUT
-/libc-test/src/functional/pthread_robust-static.exe                                 OK
-/libc-test/src/functional/pthread_robust.exe                                        PARTIAL
+/libc-test/src/functional/pthread_robust-static.exe                                 FAILED
+/libc-test/src/functional/pthread_robust.exe                                        FAILED
 /libc-test/src/functional/pthread_tsd-static.exe                                    OK
 /libc-test/src/functional/pthread_tsd.exe                                           OK
 /libc-test/src/functional/qsort-static.exe                                          OK
