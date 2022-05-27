@@ -46,4 +46,4 @@
 /oscomp/wait                                                                    OK
 /oscomp/waitpid                                                                 FAILED
 /oscomp/write                                                                   OK
-/oscomp/yield                                                                   OK
+/oscomp/yield                                                                   PARTIAL
