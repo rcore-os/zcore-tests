@@ -7,7 +7,7 @@ from utils.test import TestRunner, TestStatus, load_testcases
 parser = argparse.ArgumentParser()
 parser.add_argument("-l", "--libos", action="store_true",
                     help="test on libos mode (otherwise bare-metal mode, x86_64 only)")
-parser.add_argument("-a", "--arch", choices=["x86_64", "riscv64"], default="x86_64", help="target architecture")
+parser.add_argument("-a", "--arch", choices=["x86_64", "riscv64", "aarch64"], default="x86_64", help="target architecture")
 parser.add_argument("-f", "--fast", action="store_true", help="do not test known failed and timeout testcases")
 parser.add_argument("-t", "--test", help="run only one test")
 args = parser.parse_args()
