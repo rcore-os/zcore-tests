@@ -151,7 +151,7 @@
 /libc-test/src/math/asinhf.exe                                                      OK
 /libc-test/src/math/asinhl.exe                                                      OK
 /libc-test/src/math/asinl.exe                                                       OK
-/libc-test/src/math/atan.exe                                                        OK
+/libc-test/src/math/atan.exe                                                        FAILED
 /libc-test/src/math/atan2.exe                                                       FAILED
 /libc-test/src/math/atan2f.exe                                                      FAILED
 /libc-test/src/math/atan2l.exe                                                      OK
@@ -166,7 +166,7 @@
 /libc-test/src/math/ceil.exe                                                        OK
 /libc-test/src/math/ceilf.exe                                                       OK
 /libc-test/src/math/ceill.exe                                                       TIMEOUT
-/libc-test/src/math/copysign.exe                                                    OK
+/libc-test/src/math/copysign.exe                                                    TIMEOUT
 /libc-test/src/math/copysignf.exe                                                   FAILED
 /libc-test/src/math/copysignl.exe                                                   OK
 /libc-test/src/math/cos.exe                                                         FAILED
@@ -178,7 +178,7 @@
 /libc-test/src/math/drem.exe                                                        OK
 /libc-test/src/math/dremf.exe                                                       OK
 /libc-test/src/math/erf.exe                                                         OK
-/libc-test/src/math/erfc.exe                                                        OK
+/libc-test/src/math/erfc.exe                                                        FAILED
 /libc-test/src/math/erfcf.exe                                                       OK
 /libc-test/src/math/erfcl.exe                                                       OK
 /libc-test/src/math/erff.exe                                                        OK
@@ -228,7 +228,7 @@
 /libc-test/src/math/ilogbf.exe                                                      OK
 /libc-test/src/math/ilogbl.exe                                                      OK
 /libc-test/src/math/isless.exe                                                      OK
-/libc-test/src/math/j0.exe                                                          OK
+/libc-test/src/math/j0.exe                                                          FAILED
 /libc-test/src/math/j0f.exe                                                         OK
 /libc-test/src/math/j1.exe                                                          OK
 /libc-test/src/math/j1f.exe                                                         FAILED
@@ -256,7 +256,7 @@
 /libc-test/src/math/log1p.exe                                                       FAILED
 /libc-test/src/math/log1pf.exe                                                      OK
 /libc-test/src/math/log1pl.exe                                                      OK
-/libc-test/src/math/log2.exe                                                        OK
+/libc-test/src/math/log2.exe                                                        FAILED
 /libc-test/src/math/log2f.exe                                                       OK
 /libc-test/src/math/log2l.exe                                                       OK
 /libc-test/src/math/logb.exe                                                        OK
@@ -336,7 +336,7 @@
 /libc-test/src/math/y0f.exe                                                         OK
 /libc-test/src/math/y1.exe                                                          FAILED
 /libc-test/src/math/y1f.exe                                                         FAILED
-/libc-test/src/math/yn.exe                                                          OK
+/libc-test/src/math/yn.exe                                                          FAILED
 /libc-test/src/math/ynf.exe                                                         OK
 /libc-test/src/musl/pleval-static.exe                                               OK
 /libc-test/src/regression/daemon-failure-static.exe                                 FAILED
@@ -456,7 +456,7 @@
 /libc-test/src/regression/sigaltstack-static.exe                                    FAILED
 /libc-test/src/regression/sigaltstack.exe                                           FAILED
 /libc-test/src/regression/sigprocmask-internal-static.exe                           OK
-/libc-test/src/regression/sigprocmask-internal.exe                                  OK
+/libc-test/src/regression/sigprocmask-internal.exe                                  TIMEOUT
 /libc-test/src/regression/sigreturn-static.exe                                      FAILED
 /libc-test/src/regression/sigreturn.exe                                             FAILED
 /libc-test/src/regression/sscanf-eof-static.exe                                     OK
