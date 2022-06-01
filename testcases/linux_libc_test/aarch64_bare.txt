@@ -153,7 +153,7 @@
 /libc-test/src/math/asinl.exe                                                       OK
 /libc-test/src/math/atan.exe                                                        OK
 /libc-test/src/math/atan2.exe                                                       FAILED
-/libc-test/src/math/atan2f.exe                                                      OK
+/libc-test/src/math/atan2f.exe                                                      FAILED
 /libc-test/src/math/atan2l.exe                                                      OK
 /libc-test/src/math/atanf.exe                                                       OK
 /libc-test/src/math/atanh.exe                                                       OK
@@ -165,13 +165,13 @@
 /libc-test/src/math/cbrtl.exe                                                       OK
 /libc-test/src/math/ceil.exe                                                        OK
 /libc-test/src/math/ceilf.exe                                                       OK
-/libc-test/src/math/ceill.exe                                                       OK
+/libc-test/src/math/ceill.exe                                                       TIMEOUT
 /libc-test/src/math/copysign.exe                                                    OK
-/libc-test/src/math/copysignf.exe                                                   OK
+/libc-test/src/math/copysignf.exe                                                   FAILED
 /libc-test/src/math/copysignl.exe                                                   OK
-/libc-test/src/math/cos.exe                                                         OK
+/libc-test/src/math/cos.exe                                                         FAILED
 /libc-test/src/math/cosf.exe                                                        OK
-/libc-test/src/math/cosh.exe                                                        OK
+/libc-test/src/math/cosh.exe                                                        FAILED
 /libc-test/src/math/coshf.exe                                                       OK
 /libc-test/src/math/coshl.exe                                                       OK
 /libc-test/src/math/cosl.exe                                                        OK
@@ -183,7 +183,7 @@
 /libc-test/src/math/erfcl.exe                                                       OK
 /libc-test/src/math/erff.exe                                                        OK
 /libc-test/src/math/erfl.exe                                                        OK
-/libc-test/src/math/exp.exe                                                         OK
+/libc-test/src/math/exp.exe                                                         FAILED
 /libc-test/src/math/exp10.exe                                                       OK
 /libc-test/src/math/exp10f.exe                                                      OK
 /libc-test/src/math/exp10l.exe                                                      OK
@@ -231,7 +231,7 @@
 /libc-test/src/math/j0.exe                                                          OK
 /libc-test/src/math/j0f.exe                                                         OK
 /libc-test/src/math/j1.exe                                                          OK
-/libc-test/src/math/j1f.exe                                                         OK
+/libc-test/src/math/j1f.exe                                                         FAILED
 /libc-test/src/math/jn.exe                                                          OK
 /libc-test/src/math/jnf.exe                                                         OK
 /libc-test/src/math/ldexp.exe                                                       OK
@@ -282,7 +282,7 @@
 /libc-test/src/math/nexttoward.exe                                                  OK
 /libc-test/src/math/nexttowardf.exe                                                 OK
 /libc-test/src/math/nexttowardl.exe                                                 OK
-/libc-test/src/math/pow.exe                                                         OK
+/libc-test/src/math/pow.exe                                                         FAILED
 /libc-test/src/math/pow10.exe                                                       OK
 /libc-test/src/math/pow10f.exe                                                      OK
 /libc-test/src/math/pow10l.exe                                                      OK
@@ -290,7 +290,7 @@
 /libc-test/src/math/powl.exe                                                        OK
 /libc-test/src/math/remainder.exe                                                   OK
 /libc-test/src/math/remainderf.exe                                                  OK
-/libc-test/src/math/remainderl.exe                                                  OK
+/libc-test/src/math/remainderl.exe                                                  FAILED
 /libc-test/src/math/remquo.exe                                                      OK
 /libc-test/src/math/remquof.exe                                                     OK
 /libc-test/src/math/remquol.exe                                                     OK
@@ -305,7 +305,7 @@
 /libc-test/src/math/scalbln.exe                                                     OK
 /libc-test/src/math/scalblnf.exe                                                    OK
 /libc-test/src/math/scalblnl.exe                                                    OK
-/libc-test/src/math/scalbn.exe                                                      OK
+/libc-test/src/math/scalbn.exe                                                      FAILED
 /libc-test/src/math/scalbnf.exe                                                     OK
 /libc-test/src/math/scalbnl.exe                                                     OK
 /libc-test/src/math/sin.exe                                                         FAILED
@@ -320,10 +320,10 @@
 /libc-test/src/math/sqrt.exe                                                        OK
 /libc-test/src/math/sqrtf.exe                                                       OK
 /libc-test/src/math/sqrtl.exe                                                       OK
-/libc-test/src/math/tan.exe                                                         OK
+/libc-test/src/math/tan.exe                                                         FAILED
 /libc-test/src/math/tanf.exe                                                        OK
 /libc-test/src/math/tanh.exe                                                        OK
-/libc-test/src/math/tanhf.exe                                                       OK
+/libc-test/src/math/tanhf.exe                                                       FAILED
 /libc-test/src/math/tanhl.exe                                                       OK
 /libc-test/src/math/tanl.exe                                                        OK
 /libc-test/src/math/tgamma.exe                                                      OK
@@ -392,7 +392,7 @@
 /libc-test/src/regression/mkstemp-failure-static.exe                                OK
 /libc-test/src/regression/mkstemp-failure.exe                                       OK
 /libc-test/src/regression/printf-1e9-oob-static.exe                                 OK
-/libc-test/src/regression/printf-1e9-oob.exe                                        OK
+/libc-test/src/regression/printf-1e9-oob.exe                                        FAILED
 /libc-test/src/regression/printf-fmt-g-round-static.exe                             OK
 /libc-test/src/regression/printf-fmt-g-round.exe                                    OK
 /libc-test/src/regression/printf-fmt-g-zeros-static.exe                             OK
