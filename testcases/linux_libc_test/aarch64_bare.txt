@@ -94,7 +94,7 @@
 /libc-test/src/functional/string_memset-static.exe                                  OK
 /libc-test/src/functional/string_memset.exe                                         OK
 /libc-test/src/functional/string_strchr-static.exe                                  OK
-/libc-test/src/functional/string_strchr.exe                                         OK
+/libc-test/src/functional/string_strchr.exe                                         PARTIAL
 /libc-test/src/functional/string_strcspn-static.exe                                 OK
 /libc-test/src/functional/string_strcspn.exe                                        OK
 /libc-test/src/functional/string_strstr-static.exe                                  OK
@@ -133,8 +133,6 @@
 /libc-test/src/functional/ungetc.exe                                                OK
 /libc-test/src/functional/utime-static.exe                                          OK
 /libc-test/src/functional/utime.exe                                                 OK
-/libc-test/src/functional/vfork-static.exe                                          FAILED
-/libc-test/src/functional/vfork.exe                                                 FAILED
 /libc-test/src/functional/wcsstr-static.exe                                         OK
 /libc-test/src/functional/wcsstr.exe                                                OK
 /libc-test/src/functional/wcstol-static.exe                                         OK
@@ -444,7 +442,7 @@
 /libc-test/src/regression/scanf-bytes-consumed-static.exe                           OK
 /libc-test/src/regression/scanf-bytes-consumed.exe                                  FAILED
 /libc-test/src/regression/scanf-match-literal-eof-static.exe                        OK
-/libc-test/src/regression/scanf-match-literal-eof.exe                               OK
+/libc-test/src/regression/scanf-match-literal-eof.exe                               PARTIAL
 /libc-test/src/regression/scanf-nullbyte-char-static.exe                            OK
 /libc-test/src/regression/scanf-nullbyte-char.exe                                   OK
 /libc-test/src/regression/sem_close-unmap-static.exe                                FAILED

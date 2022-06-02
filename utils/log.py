@@ -18,7 +18,8 @@ class Logger(object):
             self.file.close()
 
     def print(self, message: str):
-        print(message, end="")
+        try: print(message, end="")
+        except (BrokenPipeError, IOError): pass
         if self.file:
             self.file.write(colorless(message))
 
