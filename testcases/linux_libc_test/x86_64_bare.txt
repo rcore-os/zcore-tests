@@ -293,7 +293,7 @@
 /libc-test/src/math/remainderl.exe                                              OK
 /libc-test/src/math/remquo.exe                                                  OK
 /libc-test/src/math/remquof.exe                                                 OK
-/libc-test/src/math/remquol.exe                                                 OK
+/libc-test/src/math/remquol.exe                                                 FAILED
 /libc-test/src/math/rint.exe                                                    OK
 /libc-test/src/math/rintf.exe                                                   OK
 /libc-test/src/math/rintl.exe                                                   OK
