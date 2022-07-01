@@ -7,7 +7,7 @@
 /libc-test/src/functional/clock_gettime-static.exe                                  OK
 /libc-test/src/functional/clock_gettime.exe                                         OK
 /libc-test/src/functional/crypt-static.exe                                          OK
-/libc-test/src/functional/crypt.exe                                                 OK
+/libc-test/src/functional/crypt.exe                                                 PARTIAL
 /libc-test/src/functional/dirname-static.exe                                        OK
 /libc-test/src/functional/dirname.exe                                               OK
 /libc-test/src/functional/dlopen.exe                                                OK
@@ -80,7 +80,7 @@
 /libc-test/src/functional/sscanf-static.exe                                         OK
 /libc-test/src/functional/sscanf.exe                                                OK
 /libc-test/src/functional/sscanf_long-static.exe                                    OK
-/libc-test/src/functional/sscanf_long.exe                                           OK
+/libc-test/src/functional/sscanf_long.exe                                           PARTIAL
 /libc-test/src/functional/stat-static.exe                                           PARTIAL
 /libc-test/src/functional/stat.exe                                                  OK
 /libc-test/src/functional/strftime-static.exe                                       OK
