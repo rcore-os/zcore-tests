@@ -20,7 +20,7 @@
 /libc-test/src/functional/fnmatch-static.exe                                        OK
 /libc-test/src/functional/fnmatch.exe                                               OK
 /libc-test/src/functional/fscanf-static.exe                                         OK
-/libc-test/src/functional/fscanf.exe                                                OK
+/libc-test/src/functional/fscanf.exe                                                PARTIAL
 /libc-test/src/functional/fwscanf-static.exe                                        OK
 /libc-test/src/functional/fwscanf.exe                                               OK
 /libc-test/src/functional/iconv_open-static.exe                                     OK
@@ -105,7 +105,7 @@
 /libc-test/src/functional/strtod.exe                                                OK
 /libc-test/src/functional/strtod_long-static.exe                                    OK
 /libc-test/src/functional/strtod_long.exe                                           OK
-/libc-test/src/functional/strtod_simple-static.exe                                  OK
+/libc-test/src/functional/strtod_simple-static.exe                                  FAILED
 /libc-test/src/functional/strtod_simple.exe                                         OK
 /libc-test/src/functional/strtof-static.exe                                         OK
 /libc-test/src/functional/strtof.exe                                                OK
@@ -113,7 +113,7 @@
 /libc-test/src/functional/strtol.exe                                                OK
 /libc-test/src/functional/strtold-static.exe                                        OK
 /libc-test/src/functional/strtold.exe                                               OK
-/libc-test/src/functional/swprintf-static.exe                                       OK
+/libc-test/src/functional/swprintf-static.exe                                       PARTIAL
 /libc-test/src/functional/swprintf.exe                                              OK
 /libc-test/src/functional/tgmath-static.exe                                         OK
 /libc-test/src/functional/tgmath.exe                                                PARTIAL
@@ -149,7 +149,7 @@
 /libc-test/src/math/asinhf.exe                                                      OK
 /libc-test/src/math/asinhl.exe                                                      OK
 /libc-test/src/math/asinl.exe                                                       OK
-/libc-test/src/math/atan.exe                                                        OK
+/libc-test/src/math/atan.exe                                                        PARTIAL
 /libc-test/src/math/atan2.exe                                                       OK
 /libc-test/src/math/atan2f.exe                                                      OK
 /libc-test/src/math/atan2l.exe                                                      OK
@@ -181,11 +181,11 @@
 /libc-test/src/math/erfcl.exe                                                       OK
 /libc-test/src/math/erff.exe                                                        OK
 /libc-test/src/math/erfl.exe                                                        OK
-/libc-test/src/math/exp.exe                                                         OK
+/libc-test/src/math/exp.exe                                                         FAILED
 /libc-test/src/math/exp10.exe                                                       OK
 /libc-test/src/math/exp10f.exe                                                      OK
 /libc-test/src/math/exp10l.exe                                                      OK
-/libc-test/src/math/exp2.exe                                                        OK
+/libc-test/src/math/exp2.exe                                                        FAILED
 /libc-test/src/math/exp2f.exe                                                       OK
 /libc-test/src/math/exp2l.exe                                                       OK
 /libc-test/src/math/expf.exe                                                        OK
@@ -226,7 +226,7 @@
 /libc-test/src/math/ilogbf.exe                                                      OK
 /libc-test/src/math/ilogbl.exe                                                      OK
 /libc-test/src/math/isless.exe                                                      OK
-/libc-test/src/math/j0.exe                                                          FAILED
+/libc-test/src/math/j0.exe                                                          PARTIAL
 /libc-test/src/math/j0f.exe                                                         OK
 /libc-test/src/math/j1.exe                                                          OK
 /libc-test/src/math/j1f.exe                                                         OK
@@ -280,7 +280,7 @@
 /libc-test/src/math/nexttoward.exe                                                  OK
 /libc-test/src/math/nexttowardf.exe                                                 OK
 /libc-test/src/math/nexttowardl.exe                                                 OK
-/libc-test/src/math/pow.exe                                                         OK
+/libc-test/src/math/pow.exe                                                         FAILED
 /libc-test/src/math/pow10.exe                                                       OK
 /libc-test/src/math/pow10f.exe                                                      OK
 /libc-test/src/math/pow10l.exe                                                      OK
@@ -306,7 +306,7 @@
 /libc-test/src/math/scalbn.exe                                                      OK
 /libc-test/src/math/scalbnf.exe                                                     OK
 /libc-test/src/math/scalbnl.exe                                                     OK
-/libc-test/src/math/sin.exe                                                         OK
+/libc-test/src/math/sin.exe                                                         FAILED
 /libc-test/src/math/sincos.exe                                                      OK
 /libc-test/src/math/sincosf.exe                                                     OK
 /libc-test/src/math/sincosl.exe                                                     OK
@@ -321,7 +321,7 @@
 /libc-test/src/math/tan.exe                                                         FAILED
 /libc-test/src/math/tanf.exe                                                        OK
 /libc-test/src/math/tanh.exe                                                        OK
-/libc-test/src/math/tanhf.exe                                                       FAILED
+/libc-test/src/math/tanhf.exe                                                       PARTIAL
 /libc-test/src/math/tanhl.exe                                                       OK
 /libc-test/src/math/tanl.exe                                                        OK
 /libc-test/src/math/tgamma.exe                                                      OK
@@ -330,7 +330,7 @@
 /libc-test/src/math/trunc.exe                                                       OK
 /libc-test/src/math/truncf.exe                                                      OK
 /libc-test/src/math/truncl.exe                                                      OK
-/libc-test/src/math/y0.exe                                                          OK
+/libc-test/src/math/y0.exe                                                          PARTIAL
 /libc-test/src/math/y0f.exe                                                         OK
 /libc-test/src/math/y1.exe                                                          OK
 /libc-test/src/math/y1f.exe                                                         OK
