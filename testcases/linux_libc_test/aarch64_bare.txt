@@ -103,7 +103,7 @@
 /libc-test/src/functional/strptime.exe                                              OK
 /libc-test/src/functional/strtod-static.exe                                         OK
 /libc-test/src/functional/strtod.exe                                                OK
-/libc-test/src/functional/strtod_long-static.exe                                    OK
+/libc-test/src/functional/strtod_long-static.exe                                    PARTIAL
 /libc-test/src/functional/strtod_long.exe                                           OK
 /libc-test/src/functional/strtod_simple-static.exe                                  PARTIAL
 /libc-test/src/functional/strtod_simple.exe                                         OK
@@ -231,7 +231,7 @@
 /libc-test/src/math/j1.exe                                                          OK
 /libc-test/src/math/j1f.exe                                                         OK
 /libc-test/src/math/jn.exe                                                          OK
-/libc-test/src/math/jnf.exe                                                         OK
+/libc-test/src/math/jnf.exe                                                         PARTIAL
 /libc-test/src/math/ldexp.exe                                                       OK
 /libc-test/src/math/ldexpf.exe                                                      OK
 /libc-test/src/math/ldexpl.exe                                                      OK
@@ -304,7 +304,7 @@
 /libc-test/src/math/scalblnf.exe                                                    OK
 /libc-test/src/math/scalblnl.exe                                                    OK
 /libc-test/src/math/scalbn.exe                                                      OK
-/libc-test/src/math/scalbnf.exe                                                     OK
+/libc-test/src/math/scalbnf.exe                                                     PARTIAL
 /libc-test/src/math/scalbnl.exe                                                     OK
 /libc-test/src/math/sin.exe                                                         FAILED
 /libc-test/src/math/sincos.exe                                                      OK
@@ -392,7 +392,7 @@
 /libc-test/src/regression/printf-1e9-oob-static.exe                                 OK
 /libc-test/src/regression/printf-1e9-oob.exe                                        PARTIAL
 /libc-test/src/regression/printf-fmt-g-round-static.exe                             OK
-/libc-test/src/regression/printf-fmt-g-round.exe                                    OK
+/libc-test/src/regression/printf-fmt-g-round.exe                                    PARTIAL
 /libc-test/src/regression/printf-fmt-g-zeros-static.exe                             OK
 /libc-test/src/regression/printf-fmt-g-zeros.exe                                    PARTIAL
 /libc-test/src/regression/printf-fmt-n-static.exe                                   OK
