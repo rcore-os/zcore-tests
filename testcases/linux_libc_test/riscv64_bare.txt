@@ -103,8 +103,8 @@
 /libc-test/src/functional/strptime.exe                                              OK
 /libc-test/src/functional/strtod-static.exe                                         OK
 /libc-test/src/functional/strtod.exe                                                OK
-/libc-test/src/functional/strtod_long-static.exe                                    FAILED
-/libc-test/src/functional/strtod_long.exe                                           FAILED
+/libc-test/src/functional/strtod_long-static.exe                                    OK
+/libc-test/src/functional/strtod_long.exe                                           OK
 /libc-test/src/functional/strtod_simple-static.exe                                  OK
 /libc-test/src/functional/strtod_simple.exe                                         OK
 /libc-test/src/functional/strtof-static.exe                                         OK
@@ -345,8 +345,8 @@
 /libc-test/src/regression/dn_expand-empty.exe                                       OK
 /libc-test/src/regression/dn_expand-ptr-0-static.exe                                OK
 /libc-test/src/regression/dn_expand-ptr-0.exe                                       OK
-/libc-test/src/regression/execle-env-static.exe                                     FAILED
-/libc-test/src/regression/execle-env.exe                                            FAILED
+/libc-test/src/regression/execle-env-static.exe                                     PARTIAL
+/libc-test/src/regression/execle-env.exe                                            PARTIAL
 /libc-test/src/regression/fflush-exit-static.exe                                    OK
 /libc-test/src/regression/fflush-exit.exe                                           OK
 /libc-test/src/regression/fgets-eof-static.exe                                      OK

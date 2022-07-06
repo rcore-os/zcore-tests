@@ -41,8 +41,8 @@
 /libc-test/src/functional/popen.exe                                             FAILED
 /libc-test/src/functional/pthread_cancel-points-static.exe                      OK
 /libc-test/src/functional/pthread_cancel-points.exe                             OK
-/libc-test/src/functional/pthread_cancel-static.exe                             TIMEOUT
-/libc-test/src/functional/pthread_cancel.exe                                    TIMEOUT
+/libc-test/src/functional/pthread_cancel-static.exe                             OK
+/libc-test/src/functional/pthread_cancel.exe                                    OK
 /libc-test/src/functional/pthread_cond-static.exe                               OK
 /libc-test/src/functional/pthread_cond.exe                                      OK
 /libc-test/src/functional/pthread_mutex-static.exe                              TIMEOUT
@@ -103,8 +103,8 @@
 /libc-test/src/functional/strptime.exe                                          OK
 /libc-test/src/functional/strtod-static.exe                                     OK
 /libc-test/src/functional/strtod.exe                                            OK
-/libc-test/src/functional/strtod_long-static.exe                                FAILED
-/libc-test/src/functional/strtod_long.exe                                       FAILED
+/libc-test/src/functional/strtod_long-static.exe                                OK
+/libc-test/src/functional/strtod_long.exe                                       OK
 /libc-test/src/functional/strtod_simple-static.exe                              OK
 /libc-test/src/functional/strtod_simple.exe                                     OK
 /libc-test/src/functional/strtof-static.exe                                     OK
@@ -337,7 +337,7 @@
 /libc-test/src/math/y1.exe                                                      OK
 /libc-test/src/math/y1f.exe                                                     OK
 /libc-test/src/math/yn.exe                                                      OK
-/libc-test/src/math/ynf.exe                                                     FAILED
+/libc-test/src/math/ynf.exe                                                     OK
 /libc-test/src/musl/pleval-static.exe                                           OK
 /libc-test/src/regression/daemon-failure-static.exe                             OK
 /libc-test/src/regression/daemon-failure.exe                                    OK
@@ -345,8 +345,8 @@
 /libc-test/src/regression/dn_expand-empty.exe                                   OK
 /libc-test/src/regression/dn_expand-ptr-0-static.exe                            OK
 /libc-test/src/regression/dn_expand-ptr-0.exe                                   OK
-/libc-test/src/regression/execle-env-static.exe                                 FAILED
-/libc-test/src/regression/execle-env.exe                                        FAILED
+/libc-test/src/regression/execle-env-static.exe                                 OK
+/libc-test/src/regression/execle-env.exe                                        OK
 /libc-test/src/regression/fflush-exit-static.exe                                OK
 /libc-test/src/regression/fflush-exit.exe                                       OK
 /libc-test/src/regression/fgets-eof-static.exe                                  OK
