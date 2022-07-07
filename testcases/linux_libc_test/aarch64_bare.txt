@@ -102,7 +102,7 @@
 /libc-test/src/functional/strptime-static.exe                                       OK
 /libc-test/src/functional/strptime.exe                                              OK
 /libc-test/src/functional/strtod-static.exe                                         OK
-/libc-test/src/functional/strtod.exe                                                OK
+/libc-test/src/functional/strtod.exe                                                PARTIAL
 /libc-test/src/functional/strtod_long-static.exe                                    PARTIAL
 /libc-test/src/functional/strtod_long.exe                                           OK
 /libc-test/src/functional/strtod_simple-static.exe                                  PARTIAL
@@ -158,7 +158,7 @@
 /libc-test/src/math/atanhf.exe                                                      PARTIAL
 /libc-test/src/math/atanhl.exe                                                      OK
 /libc-test/src/math/atanl.exe                                                       OK
-/libc-test/src/math/cbrt.exe                                                        OK
+/libc-test/src/math/cbrt.exe                                                        PARTIAL
 /libc-test/src/math/cbrtf.exe                                                       PARTIAL
 /libc-test/src/math/cbrtl.exe                                                       OK
 /libc-test/src/math/ceil.exe                                                        PARTIAL
@@ -186,7 +186,7 @@
 /libc-test/src/math/exp10f.exe                                                      PARTIAL
 /libc-test/src/math/exp10l.exe                                                      OK
 /libc-test/src/math/exp2.exe                                                        PARTIAL
-/libc-test/src/math/exp2f.exe                                                       OK
+/libc-test/src/math/exp2f.exe                                                       PARTIAL
 /libc-test/src/math/exp2l.exe                                                       OK
 /libc-test/src/math/expf.exe                                                        PARTIAL
 /libc-test/src/math/expl.exe                                                        OK
