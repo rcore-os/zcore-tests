@@ -91,7 +91,7 @@
 /libc-test/src/functional/string_memcpy.exe                                         OK
 /libc-test/src/functional/string_memmem-static.exe                                  OK
 /libc-test/src/functional/string_memmem.exe                                         OK
-/libc-test/src/functional/string_memset-static.exe                                  OK
+/libc-test/src/functional/string_memset-static.exe                                  PARTIAL
 /libc-test/src/functional/string_memset.exe                                         OK
 /libc-test/src/functional/string_strchr-static.exe                                  OK
 /libc-test/src/functional/string_strchr.exe                                         OK
