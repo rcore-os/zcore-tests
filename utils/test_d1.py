@@ -5,7 +5,7 @@ import subprocess
 from termcolor import colored
 from typing import List, Tuple
 from enum import Enum
-from .log_d1 import Logger
+from .log import Logger
 import serial
 import sys
 import re
@@ -63,14 +63,16 @@ def load_testcases(filename: str) -> List[Tuple[str, TestStatus]]:
 
 class TestRunner(object):
     def __init__(self, device):
+        self.logger = Logger()
         self.ser = serial.Serial(device,115200,timeout=3600)
         if self.ser.isOpen():
-            print("open succeed >",self.ser.name)
+            self.logger.println("open succeed > "+self.ser.name)
         else:
-            print("open failed >",self.ser.name)
+            self.logger.println("open failed > "+self.ser.name)
             sys.exit(-1)
 
     def __del__(self):
+        self.ser.close()
         self.teardown()
 
     def build_cmdline(self):
@@ -104,11 +106,24 @@ class TestRunner(object):
 
     def run_one(self, name: str, fast=False, timeout=None) -> TestStatus:
         cmdline = name + '\n'
-        self.ser.write(cmdline.encode())
-        time_begin = time.time()
+        output = ""
 
         while True:
-            output = self.ser.readline()
+            line = self.ser.readline()
+            if isinstance(line, str):
+                output.join(line)
+                self.logger.print("1 "+line)
+            if re.search(r"/ # [/r/n]", output):
+                self.ser.write(cmdline.encode())
+                break
+            time.sleep(1)
+
+        time_begin = time.time()
+        while True:
+            line = self.ser.readline()
+            if isinstance(line, str):
+                output.join(line)
+                self.logger.print("2"+line)
             if re.search(r"/ # [/r/n]", output):
                 break
             if time.time() - time_begin > timeout:

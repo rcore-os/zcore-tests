@@ -1,7 +1,7 @@
 import sys
 import argparse
 from utils.test_d1 import TestRunner, TestStatus, load_testcases
-from utils.log_d1 import Logger
+from utils.log import Logger
 
 parser = argparse.ArgumentParser()
 parser.add_argument("-a", "--arch", choices=["x86_64", "riscv64", "aarch64"], default="x86_64", help="target architecture")
