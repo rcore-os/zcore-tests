@@ -9,6 +9,7 @@ from .log import Logger
 import serial
 import sys
 import re
+import threading
 
 class TestStatus(Enum):
     OK = "OK"
@@ -64,9 +65,13 @@ def load_testcases(filename: str) -> List[Tuple[str, TestStatus]]:
 class TestRunner(object):
     def __init__(self, device):
         self.logger = Logger()
+        self.output = ""
+        self.receiver_thread = None
+        self.ser_clear = False
         self.ser = serial.Serial(device,115200,timeout=3600)
         if self.ser.isOpen():
             self.logger.println("open succeed > "+self.ser.name)
+            self._start_reader()
         else:
             self.logger.println("open failed > "+self.ser.name)
             sys.exit(-1)
@@ -74,6 +79,20 @@ class TestRunner(object):
     def __del__(self):
         self.ser.close()
         self.teardown()
+
+    def _start_reader(self):
+        self.receiver_thread = threading.Thread(target=self.ser_reader)
+        self.receiver_thread.daemon = True
+        self.receiver_thread.start()
+    
+    def ser_reader(self):
+        while True:
+            output = self.ser.readline().decode()
+            if self.ser_clear:
+                self.output = ""
+                self.ser_clear = False
+            if output:
+                self.output += output
 
     def build_cmdline(self):
         return None
@@ -106,38 +125,33 @@ class TestRunner(object):
 
     def run_one(self, name: str, fast=False, timeout=None) -> TestStatus:
         cmdline = name + '\n'
-        output = ""
 
         while True:
-            line = self.ser.readline()
-            if isinstance(line, str):
-                output.join(line)
-                self.logger.print("1 "+line)
-            if re.search(r"/ # [/r/n]", output):
+            if re.search(r"/ # [^/]", self.output):
+                self.ser_clear = True
                 self.ser.write(cmdline.encode())
                 break
+            else:
+                self.ser.write('\n'.encode())
             time.sleep(1)
 
+        status = TestStatus.OK
         time_begin = time.time()
         while True:
-            line = self.ser.readline()
-            if isinstance(line, str):
-                output.join(line)
-                self.logger.print("2"+line)
-            if re.search(r"/ # [/r/n]", output):
-                break
             if time.time() - time_begin > timeout:
                 status = TestStatus.TIMEOUT
+                break
+            if re.search(r"/ # [^/]", self.output):
                 break
         time_end = time.time()
 
         if status != TestStatus.TIMEOUT:
-            status = self.check_output(output)
+            status = self.check_output(self.output)
 
         if status != TestStatus.OK or not fast:
-            self.logger.println(colored(output, "magenta"))
+            self.logger.println(colored(self.output, "magenta"))
         else:
-            self.logger.println_file_only(output)
+            self.logger.println_file_only(self.output)
         self.logger.println("  %s (%.3fs)\n" % (status.colored_name(), time_end - time_begin))
         time.sleep(0.1)
 
@@ -155,6 +169,8 @@ class TestRunner(object):
                 result.append((name, TestStatus.SKIPPED))
                 continue
 
+            self.logger.print("run one1")
+            self.logger.println("run one2")
             actual_status = self.run_one(name, fast, timeout)
             result.append((name, actual_status))
             if actual_status != expected_status and expected_status == TestStatus.OK:
