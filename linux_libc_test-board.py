@@ -16,7 +16,7 @@ TEST_NAME = "%s_%s" % (args.arch, args.board)
 TEST_FILE = "%s/%s.txt" % (TEST_DIR, TEST_NAME)
 LOG_OUTPUT = "linux_libc_test_%s.log" % TEST_NAME
 
-TIMEOUT = 10
+TIMEOUT = 60
 FAILED_PATTERN = ["failed","ERROR","panicked"]
 
 class LinuxTestRunner(TestRunner):
@@ -33,7 +33,7 @@ class LinuxTestRunner(TestRunner):
 
 if __name__=='__main__':
     runner = LinuxTestRunner(args.device)
-    runner.burn()
+    # runner.burn()
 
     if args.test:
         res = runner.run_one(args.test, args.fast, TIMEOUT)
