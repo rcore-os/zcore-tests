@@ -60,7 +60,7 @@ def load_testcases(filename: str) -> List[Tuple[str, TestStatus]]:
             if len(line) == 2:
                 name, status = line
                 cases.append((name, TestStatus.from_str(status)))
-    return sorted(cases)
+    return cases
 
 class TestRunner(object):
     def __init__(self, device):
@@ -126,9 +126,11 @@ class TestRunner(object):
     def run_one(self, name: str, fast=False, timeout=None) -> TestStatus:
         cmdline = name + '\n'
 
+        time_begin = time.time()
         while True:
+            print(self.output)
+            self.ser_clear = True
             if re.search(r"/ # [^/]", self.output):
-                self.ser_clear = True
                 self.ser.write(cmdline.encode())
                 break
             else:
@@ -136,7 +138,6 @@ class TestRunner(object):
             time.sleep(1)
 
         status = TestStatus.OK
-        time_begin = time.time()
         while True:
             if time.time() - time_begin > timeout:
                 status = TestStatus.TIMEOUT
@@ -161,7 +162,7 @@ class TestRunner(object):
         self.logger.println("======== Run %d testcases ========" % len(testcases))
         result = []
         failed = False
-        for (i, (name, expected_status)) in enumerate(sorted(testcases)):
+        for (i, (name, expected_status)) in enumerate(testcases):
             ignore_on_fast = expected_status in [TestStatus.TIMEOUT, TestStatus.FAILED, TestStatus.SKIPPED]
             self.logger.println("Test %d: %s" % (i, name if not ignore_on_fast else name + " (ignored)"))
             if fast and ignore_on_fast:
