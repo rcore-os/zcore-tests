@@ -35,6 +35,7 @@ if __name__=='__main__':
     runner = LinuxTestRunner(args.device)
     # runner.burn()
 
+    print('test_file ', TEST_FILE)
     if args.test:
         res = runner.run_one(args.test, args.fast, TIMEOUT)
         ok = res == TestStatus.OK

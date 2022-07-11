@@ -23,8 +23,10 @@ def rcv_data():
         rcv=serial.readline()
         rcv=rcv.decode() 
         print(rcv)
-        with open(OUTPUT_FILE, 'a') as f: print(rcv, file=f)
-        with open(TMP_FILE, 'a') as f: print(rcv, file=f)
+        with open(OUTPUT_FILE, 'a') as f:
+            f.write(rcv)
+        with open(TMP_FILE, 'a') as f:
+            f.write(rcv)
 
 if __name__=='__main__':
     serialName = "/dev/ttyUSB0"
