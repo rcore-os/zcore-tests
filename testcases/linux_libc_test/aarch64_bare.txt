@@ -78,7 +78,7 @@
 /libc-test/src/functional/spawn-static.exe                                          TIMEOUT
 /libc-test/src/functional/spawn.exe                                                 TIMEOUT
 /libc-test/src/functional/sscanf-static.exe                                         OK
-/libc-test/src/functional/sscanf.exe                                                OK
+/libc-test/src/functional/sscanf.exe                                                PARTIAL
 /libc-test/src/functional/sscanf_long-static.exe                                    OK
 /libc-test/src/functional/sscanf_long.exe                                           PARTIAL
 /libc-test/src/functional/stat-static.exe                                           PARTIAL
@@ -104,7 +104,7 @@
 /libc-test/src/functional/strtod-static.exe                                         OK
 /libc-test/src/functional/strtod.exe                                                PARTIAL
 /libc-test/src/functional/strtod_long-static.exe                                    PARTIAL
-/libc-test/src/functional/strtod_long.exe                                           OK
+/libc-test/src/functional/strtod_long.exe                                           PARTIAL
 /libc-test/src/functional/strtod_simple-static.exe                                  PARTIAL
 /libc-test/src/functional/strtod_simple.exe                                         PARTIAL
 /libc-test/src/functional/strtof-static.exe                                         OK
@@ -145,7 +145,7 @@
 /libc-test/src/math/acosl.exe                                                       OK
 /libc-test/src/math/asin.exe                                                        PARTIAL
 /libc-test/src/math/asinf.exe                                                       OK
-/libc-test/src/math/asinh.exe                                                       OK
+/libc-test/src/math/asinh.exe                                                       PARTIAL
 /libc-test/src/math/asinhf.exe                                                      OK
 /libc-test/src/math/asinhl.exe                                                      OK
 /libc-test/src/math/asinl.exe                                                       OK
@@ -176,7 +176,7 @@
 /libc-test/src/math/drem.exe                                                        OK
 /libc-test/src/math/dremf.exe                                                       OK
 /libc-test/src/math/erf.exe                                                         OK
-/libc-test/src/math/erfc.exe                                                        OK
+/libc-test/src/math/erfc.exe                                                        PARTIAL
 /libc-test/src/math/erfcf.exe                                                       OK
 /libc-test/src/math/erfcl.exe                                                       OK
 /libc-test/src/math/erff.exe                                                        OK
@@ -225,7 +225,7 @@
 /libc-test/src/math/ilogb.exe                                                       OK
 /libc-test/src/math/ilogbf.exe                                                      OK
 /libc-test/src/math/ilogbl.exe                                                      OK
-/libc-test/src/math/isless.exe                                                      OK
+/libc-test/src/math/isless.exe                                                      PARTIAL
 /libc-test/src/math/j0.exe                                                          PARTIAL
 /libc-test/src/math/j0f.exe                                                         OK
 /libc-test/src/math/j1.exe                                                          OK
@@ -257,7 +257,7 @@
 /libc-test/src/math/log2.exe                                                        PARTIAL
 /libc-test/src/math/log2f.exe                                                       OK
 /libc-test/src/math/log2l.exe                                                       OK
-/libc-test/src/math/logb.exe                                                        OK
+/libc-test/src/math/logb.exe                                                        PARTIAL
 /libc-test/src/math/logbf.exe                                                       OK
 /libc-test/src/math/logbl.exe                                                       OK
 /libc-test/src/math/logf.exe                                                        OK
@@ -289,7 +289,7 @@
 /libc-test/src/math/remainder.exe                                                   OK
 /libc-test/src/math/remainderf.exe                                                  OK
 /libc-test/src/math/remainderl.exe                                                  OK
-/libc-test/src/math/remquo.exe                                                      OK
+/libc-test/src/math/remquo.exe                                                      PARTIAL
 /libc-test/src/math/remquof.exe                                                     OK
 /libc-test/src/math/remquol.exe                                                     OK
 /libc-test/src/math/rint.exe                                                        OK
@@ -331,7 +331,7 @@
 /libc-test/src/math/truncf.exe                                                      OK
 /libc-test/src/math/truncl.exe                                                      OK
 /libc-test/src/math/y0.exe                                                          PARTIAL
-/libc-test/src/math/y0f.exe                                                         OK
+/libc-test/src/math/y0f.exe                                                         PARTIAL
 /libc-test/src/math/y1.exe                                                          PARTIAL
 /libc-test/src/math/y1f.exe                                                         OK
 /libc-test/src/math/yn.exe                                                          PARTIAL
