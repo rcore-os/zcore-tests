@@ -60,14 +60,14 @@ def load_testcases(filename: str) -> List[Tuple[str, TestStatus]]:
             if len(line) == 2:
                 name, status = line
                 cases.append((name, TestStatus.from_str(status)))
-    return cases
+    return sorted(cases)
 
 class TestRunner(object):
     def __init__(self, device):
         self.logger = Logger()
         self.output = ""
         self.receiver_thread = None
-        self.ser_clear = False
+        self.lk = threading.Lock()
         self.ser = serial.Serial(device,115200,timeout=3600)
         if self.ser.isOpen():
             self.logger.println("open succeed > "+self.ser.name)
@@ -87,12 +87,11 @@ class TestRunner(object):
     
     def ser_reader(self):
         while True:
-            output = self.ser.readline().decode()
-            if self.ser_clear:
-                self.output = ""
-                self.ser_clear = False
+            output = self.ser.read(self.ser.in_waiting or 1).decode()
             if output:
+                self.lk.acquire()
                 self.output += output
+                self.lk.release()
 
     def build_cmdline(self):
         return None
@@ -125,17 +124,17 @@ class TestRunner(object):
 
     def run_one(self, name: str, fast=False, timeout=None) -> TestStatus:
         cmdline = name + '\n'
-
-        time_begin = time.time()
+        
         while True:
-            print(self.output)
-            self.ser_clear = True
             if re.search(r"/ # [^/]", self.output):
+                self.lk.acquire()
+                self.output = ""
+                self.lk.release()
+                time_begin = time.time()
                 self.ser.write(cmdline.encode())
                 break
-            else:
-                self.ser.write('\n'.encode())
-            time.sleep(1)
+            self.ser.write('\n'.encode())
+            time.sleep(0.2)
 
         status = TestStatus.OK
         while True:
@@ -144,6 +143,8 @@ class TestRunner(object):
                 break
             if re.search(r"/ # [^/]", self.output):
                 break
+            self.ser.write('\n'.encode())
+            time.sleep(0.5) # too little sleep will led to mistake
         time_end = time.time()
 
         if status != TestStatus.TIMEOUT:
@@ -162,7 +163,7 @@ class TestRunner(object):
         self.logger.println("======== Run %d testcases ========" % len(testcases))
         result = []
         failed = False
-        for (i, (name, expected_status)) in enumerate(testcases):
+        for (i, (name, expected_status)) in enumerate(sorted(testcases)):
             ignore_on_fast = expected_status in [TestStatus.TIMEOUT, TestStatus.FAILED, TestStatus.SKIPPED]
             self.logger.println("Test %d: %s" % (i, name if not ignore_on_fast else name + " (ignored)"))
             if fast and ignore_on_fast:
@@ -170,8 +171,6 @@ class TestRunner(object):
                 result.append((name, TestStatus.SKIPPED))
                 continue
 
-            self.logger.print("run one1")
-            self.logger.println("run one2")
             actual_status = self.run_one(name, fast, timeout)
             result.append((name, actual_status))
             if actual_status != expected_status and expected_status == TestStatus.OK:

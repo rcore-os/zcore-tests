@@ -40,9 +40,4 @@ python linux_libc_test-board.py -a riscv64 -f -b d1 -D /dev/ttyUSB0
   # 运行所在testcases/linux_libc_test/riscv64_d1.txt里状态为OK的测例
 python linux_libc_test-board.py -a riscv64 -t <testcase>
   # 运行单个测例<testcase>
-
-# TODO:
-1. utils/test_d1.py里正则表达式的调试
-2. testcases/linux_libc_test/riscv64_d1.txt里测例状态的修改
-3. 把oscomp里通过的测例加到testcases/linux_libc_test/riscv64_d1.txt里
 ```
