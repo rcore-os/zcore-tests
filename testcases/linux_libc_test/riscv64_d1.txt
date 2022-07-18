@@ -29,8 +29,8 @@
 /libc-test/src/functional/inet_pton.exe                                             OK
 /libc-test/src/functional/ipc_msg-static.exe                                        FAILED
 /libc-test/src/functional/ipc_msg.exe                                               FAILED
-/libc-test/src/functional/ipc_sem-static.exe                                        FAILED
-/libc-test/src/functional/ipc_sem.exe                                               FAILED
+/libc-test/src/functional/ipc_sem-static.exe                                        PARTIAL
+/libc-test/src/functional/ipc_sem.exe                                               PARTIAL
 /libc-test/src/functional/ipc_shm-static.exe                                        TIMEOUT
 /libc-test/src/functional/ipc_shm.exe                                               TIMEOUT
 /libc-test/src/functional/mbc-static.exe                                            OK
@@ -73,8 +73,8 @@
 /libc-test/src/functional/setjmp.exe                                                OK
 /libc-test/src/functional/snprintf-static.exe                                       OK
 /libc-test/src/functional/snprintf.exe                                              OK
-/libc-test/src/functional/socket-static.exe                                         TIMEOUT
-/libc-test/src/functional/socket.exe                                                TIMEOUT
+/libc-test/src/functional/socket-static.exe                                         OK
+/libc-test/src/functional/socket.exe                                                OK
 /libc-test/src/functional/spawn-static.exe                                          TIMEOUT
 /libc-test/src/functional/spawn.exe                                                 TIMEOUT
 /libc-test/src/functional/sscanf-static.exe                                         OK

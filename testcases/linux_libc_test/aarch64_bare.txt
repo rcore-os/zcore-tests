@@ -17,7 +17,7 @@
 /libc-test/src/functional/fcntl.exe                                                 FAILED
 /libc-test/src/functional/fdopen-static.exe                                         OK
 /libc-test/src/functional/fdopen.exe                                                OK
-/libc-test/src/functional/fnmatch-static.exe                                        OK
+/libc-test/src/functional/fnmatch-static.exe                                        PARTIAL
 /libc-test/src/functional/fnmatch.exe                                               OK
 /libc-test/src/functional/fscanf-static.exe                                         PARTIAL
 /libc-test/src/functional/fscanf.exe                                                PARTIAL
@@ -179,7 +179,7 @@
 /libc-test/src/math/erfc.exe                                                        PARTIAL
 /libc-test/src/math/erfcf.exe                                                       OK
 /libc-test/src/math/erfcl.exe                                                       OK
-/libc-test/src/math/erff.exe                                                        OK
+/libc-test/src/math/erff.exe                                                        PARTIAL
 /libc-test/src/math/erfl.exe                                                        OK
 /libc-test/src/math/exp.exe                                                         PARTIAL
 /libc-test/src/math/exp10.exe                                                       OK
@@ -199,14 +199,14 @@
 /libc-test/src/math/fdim.exe                                                        OK
 /libc-test/src/math/fdimf.exe                                                       OK
 /libc-test/src/math/fdiml.exe                                                       OK
-/libc-test/src/math/fenv.exe                                                        OK
+/libc-test/src/math/fenv.exe                                                        PARTIAL
 /libc-test/src/math/floor.exe                                                       OK
 /libc-test/src/math/floorf.exe                                                      PARTIAL
 /libc-test/src/math/floorl.exe                                                      OK
 /libc-test/src/math/fma.exe                                                         OK
 /libc-test/src/math/fmaf.exe                                                        OK
 /libc-test/src/math/fmal.exe                                                        OK
-/libc-test/src/math/fmax.exe                                                        OK
+/libc-test/src/math/fmax.exe                                                        PARTIAL
 /libc-test/src/math/fmaxf.exe                                                       OK
 /libc-test/src/math/fmaxl.exe                                                       OK
 /libc-test/src/math/fmin.exe                                                        OK
@@ -233,7 +233,7 @@
 /libc-test/src/math/jn.exe                                                          PARTIAL
 /libc-test/src/math/jnf.exe                                                         PARTIAL
 /libc-test/src/math/ldexp.exe                                                       OK
-/libc-test/src/math/ldexpf.exe                                                      OK
+/libc-test/src/math/ldexpf.exe                                                      PARTIAL
 /libc-test/src/math/ldexpl.exe                                                      OK
 /libc-test/src/math/lgamma.exe                                                      PARTIAL
 /libc-test/src/math/lgamma_r.exe                                                    OK
@@ -252,7 +252,7 @@
 /libc-test/src/math/log10f.exe                                                      OK
 /libc-test/src/math/log10l.exe                                                      OK
 /libc-test/src/math/log1p.exe                                                       PARTIAL
-/libc-test/src/math/log1pf.exe                                                      OK
+/libc-test/src/math/log1pf.exe                                                      PARTIAL
 /libc-test/src/math/log1pl.exe                                                      OK
 /libc-test/src/math/log2.exe                                                        PARTIAL
 /libc-test/src/math/log2f.exe                                                       OK
