@@ -18,7 +18,7 @@
 /libc-test/src/functional/fdopen-static.exe                                         OK
 /libc-test/src/functional/fdopen.exe                                                OK
 /libc-test/src/functional/fnmatch-static.exe                                        PARTIAL
-/libc-test/src/functional/fnmatch.exe                                               OK
+/libc-test/src/functional/fnmatch.exe                                               PARTIAL
 /libc-test/src/functional/fscanf-static.exe                                         PARTIAL
 /libc-test/src/functional/fscanf.exe                                                PARTIAL
 /libc-test/src/functional/fwscanf-static.exe                                        PARTIAL
@@ -88,7 +88,7 @@
 /libc-test/src/functional/string-static.exe                                         OK
 /libc-test/src/functional/string.exe                                                OK
 /libc-test/src/functional/string_memcpy-static.exe                                  OK
-/libc-test/src/functional/string_memcpy.exe                                         OK
+/libc-test/src/functional/string_memcpy.exe                                         PARTIAL
 /libc-test/src/functional/string_memmem-static.exe                                  OK
 /libc-test/src/functional/string_memmem.exe                                         OK
 /libc-test/src/functional/string_memset-static.exe                                  PARTIAL
@@ -190,7 +190,7 @@
 /libc-test/src/math/exp2l.exe                                                       OK
 /libc-test/src/math/expf.exe                                                        PARTIAL
 /libc-test/src/math/expl.exe                                                        OK
-/libc-test/src/math/expm1.exe                                                       OK
+/libc-test/src/math/expm1.exe                                                       PARTIAL
 /libc-test/src/math/expm1f.exe                                                      PARTIAL
 /libc-test/src/math/expm1l.exe                                                      OK
 /libc-test/src/math/fabs.exe                                                        OK
@@ -212,8 +212,8 @@
 /libc-test/src/math/fmin.exe                                                        OK
 /libc-test/src/math/fminf.exe                                                       OK
 /libc-test/src/math/fminl.exe                                                       OK
-/libc-test/src/math/fmod.exe                                                        OK
-/libc-test/src/math/fmodf.exe                                                       OK
+/libc-test/src/math/fmod.exe                                                        PARTIAL
+/libc-test/src/math/fmodf.exe                                                       PARTIAL
 /libc-test/src/math/fmodl.exe                                                       OK
 /libc-test/src/math/fpclassify.exe                                                  OK
 /libc-test/src/math/frexp.exe                                                       OK
@@ -260,7 +260,7 @@
 /libc-test/src/math/logb.exe                                                        PARTIAL
 /libc-test/src/math/logbf.exe                                                       OK
 /libc-test/src/math/logbl.exe                                                       OK
-/libc-test/src/math/logf.exe                                                        OK
+/libc-test/src/math/logf.exe                                                        PARTIAL
 /libc-test/src/math/logl.exe                                                        OK
 /libc-test/src/math/lrint.exe                                                       OK
 /libc-test/src/math/lrintf.exe                                                      OK
@@ -344,7 +344,7 @@
 /libc-test/src/regression/dn_expand-ptr-0-static.exe                                OK
 /libc-test/src/regression/dn_expand-ptr-0.exe                                       OK
 /libc-test/src/regression/execle-env-static.exe                                     OK
-/libc-test/src/regression/execle-env.exe                                            OK
+/libc-test/src/regression/execle-env.exe                                            PARTIAL
 /libc-test/src/regression/fflush-exit-static.exe                                    OK
 /libc-test/src/regression/fflush-exit.exe                                           OK
 /libc-test/src/regression/fgets-eof-static.exe                                      OK
@@ -444,7 +444,7 @@
 /libc-test/src/regression/scanf-match-literal-eof-static.exe                        OK
 /libc-test/src/regression/scanf-match-literal-eof.exe                               OK
 /libc-test/src/regression/scanf-nullbyte-char-static.exe                            OK
-/libc-test/src/regression/scanf-nullbyte-char.exe                                   OK
+/libc-test/src/regression/scanf-nullbyte-char.exe                                   PARTIAL
 /libc-test/src/regression/sem_close-unmap-static.exe                                FAILED
 /libc-test/src/regression/sem_close-unmap.exe                                       FAILED
 /libc-test/src/regression/setenv-oom-static.exe                                     FAILED
