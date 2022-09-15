@@ -43,8 +43,8 @@
 /libc-test/src/functional/pthread_cancel-points.exe                             OK
 /libc-test/src/functional/pthread_cancel-static.exe                             OK
 /libc-test/src/functional/pthread_cancel.exe                                    OK
-/libc-test/src/functional/pthread_cond-static.exe                               OK
-/libc-test/src/functional/pthread_cond.exe                                      OK
+/libc-test/src/functional/pthread_cond-static.exe                               TIMEOUT
+/libc-test/src/functional/pthread_cond.exe                                      TIMEOUT
 /libc-test/src/functional/pthread_mutex-static.exe                              TIMEOUT
 /libc-test/src/functional/pthread_mutex.exe                                     TIMEOUT
 /libc-test/src/functional/pthread_mutex_pi-static.exe                           TIMEOUT
