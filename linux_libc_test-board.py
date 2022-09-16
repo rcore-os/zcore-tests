@@ -8,7 +8,7 @@ parser.add_argument("-a", "--arch", choices=["x86_64", "riscv64", "aarch64"], de
 parser.add_argument("-f", "--fast", action="store_true", help="do not test known failed and timeout testcases")
 parser.add_argument("-t", "--test", help="run only one test")
 parser.add_argument("-D", "--device", default="/dev/ttyUSB0", help="specify the device")
-parser.add_argument("-b", "--board", choices="d1", default="d1", help="board")
+parser.add_argument("-b", "--board", choices=["d1", "visionfive"], default="d1", help="board")
 args = parser.parse_args()
 
 TEST_DIR = "testcases/linux_libc_test"
@@ -20,7 +20,7 @@ TIMEOUT = 20
 FAILED_PATTERN = ["failed","ERROR","panicked"]
 
 class LinuxTestRunner(TestRunner):
-    BASE_CMD = "cd ../zCore && make run_d1 PLATFORM=d1 MODE=release LINUX=1 TEST=1 ARCH=%s" % args.arch
+    #BASE_CMD = "cd ../zCore && make run_d1 PLATFORM=d1 MODE=release LINUX=1 TEST=1 ARCH=%s" % args.arch
 
     def build_cmdline(self) -> str:
         return self.BASE_CMD
