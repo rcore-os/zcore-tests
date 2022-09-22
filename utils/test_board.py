@@ -68,6 +68,13 @@ class TestRunner(object):
         self.output = ""
         self.receiver_thread = None
         self.lk = threading.Lock()
+        self._open_ser(device)
+
+    def __del__(self):
+        self.ser.close()
+        self.teardown()
+
+    def _open_ser(self, device):
         self.ser = serial.Serial(device,115200,timeout=3600)
         if self.ser.isOpen():
             self.logger.println("open succeed > "+self.ser.name)
@@ -76,10 +83,9 @@ class TestRunner(object):
             self.logger.println("open failed > "+self.ser.name)
             sys.exit(-1)
 
-    def __del__(self):
+    def _close_ser(self):
         self.ser.close()
-        self.teardown()
-
+        
     def _start_reader(self):
         self.receiver_thread = threading.Thread(target=self.ser_reader)
         self.receiver_thread.daemon = True

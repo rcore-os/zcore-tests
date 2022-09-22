@@ -1,6 +1,6 @@
 import sys
 import argparse
-from utils.test_d1 import TestRunner, TestStatus, load_testcases
+from utils.test_board import TestRunner, TestStatus, load_testcases
 from utils.log import Logger
 
 parser = argparse.ArgumentParser()
@@ -8,7 +8,7 @@ parser.add_argument("-a", "--arch", choices=["x86_64", "riscv64", "aarch64"], de
 parser.add_argument("-f", "--fast", action="store_true", help="do not test known failed and timeout testcases")
 parser.add_argument("-t", "--test", help="run only one test")
 parser.add_argument("-D", "--device", default="/dev/ttyUSB0", help="specify the device")
-parser.add_argument("-b", "--board", choices="d1", default="d1", help="board")
+parser.add_argument("-b", "--board", choices=["d1", "unmatched", "visionfive"], default="d1", help="board")
 args = parser.parse_args()
 
 TEST_DIR = "testcases/linux_libc_test"
@@ -33,7 +33,7 @@ class LinuxTestRunner(TestRunner):
 
 if __name__=='__main__':
     runner = LinuxTestRunner(args.device)
-    runner.burn()
+    # runner.burn()
 
     if args.test:
         res = runner.run_one(args.test, args.fast, TIMEOUT)
