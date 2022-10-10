@@ -6,7 +6,7 @@ Test scripts for [zCore OS](https://github.com/rcore-os/zCore).
 
 **You MUST put this repository under the root directory of zCore.**
 
-## Linux libc tests
+## Linux libc tests on qemu
 
 ```
 usage: python3 linux_libc_test.py [-h] [-l] [-a {x86_64,riscv64}] [-f] [-t TEST]
@@ -32,12 +32,17 @@ optional arguments:
   -t TEST, --test TEST  run only one test
 ```
 
-## d1 libc test
+## Linux libc test on boards
 
-```
+```shell
 # usage:
-python linux_libc_test-board.py -a riscv64 -f -b d1 -D /dev/ttyUSB0
-  # 运行所在testcases/linux_libc_test/riscv64_d1.txt里状态为OK的测例
-python linux_libc_test-board.py -a riscv64 -t <testcase>
-  # 运行单个测例<testcase>
+python linux_libc_test-board.py [-a <arch>] [-f] [-b <board>] [-D <dev>]
+  # options:
+  -a <arch>, --arch <arch>	# target architecture, can be : x86_64(default), riscv64, aarch64
+  -f, --fast	# do not test known failed and timeout testcases
+  -b <board>, --board <board>	# board name, can be : d1(default), unmatched, visionfive, light
+  -D <dev>, --device <dev>	# specify the device. default : /dev/ttyUSB0
+  
+python linux_libc_test-board.py -t <testcase> [-a <arch>] [-b <board>] [-D <dev>]
+  # run only one test <testcase>
 ```

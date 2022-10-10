@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import time
 import subprocess
+from unittest import TestCase
 from termcolor import colored
 from typing import List, Tuple
 from enum import Enum
@@ -64,18 +65,20 @@ def load_testcases(filename: str) -> List[Tuple[str, TestStatus]]:
 
 class TestRunner(object):
     def __init__(self, device):
+        self.device = device
         self.logger = Logger()
         self.output = ""
+        self.thread_stop_flag = False
         self.receiver_thread = None
         self.lk = threading.Lock()
-        self._open_ser(device)
+        self._open_ser()
 
     def __del__(self):
-        self.ser.close()
+        self._close_ser()
         self.teardown()
 
-    def _open_ser(self, device):
-        self.ser = serial.Serial(device,115200,timeout=3600)
+    def _open_ser(self):
+        self.ser = serial.Serial(self.device,115200,timeout=3600)
         if self.ser.isOpen():
             self.logger.println("open succeed > "+self.ser.name)
             self._start_reader()
@@ -84,15 +87,25 @@ class TestRunner(object):
             sys.exit(-1)
 
     def _close_ser(self):
+        self._stop_reader()
         self.ser.close()
         
     def _start_reader(self):
         self.receiver_thread = threading.Thread(target=self.ser_reader)
         self.receiver_thread.daemon = True
         self.receiver_thread.start()
+
+    def _stop_reader(self):
+        self.lk.acquire()
+        self.thread_stop_flag = True
+        self.lk.release()
+        self.receiver_thread.join()
+        self.thread_stop_flag = False
     
     def ser_reader(self):
         while True:
+            if self.thread_stop_flag:
+                break
             output = self.ser.read(self.ser.in_waiting or 1).decode()
             if output:
                 self.lk.acquire()
@@ -130,17 +143,19 @@ class TestRunner(object):
 
     def run_one(self, name: str, fast=False, timeout=None) -> TestStatus:
         cmdline = name + '\n'
+        time_begin = time.time()
         
         while True:
             if re.search(r"/ # [^/]", self.output):
                 self.lk.acquire()
                 self.output = ""
                 self.lk.release()
-                time_begin = time.time()
                 self.ser.write(cmdline.encode())
                 break
             self.ser.write('\n'.encode())
             time.sleep(0.2)
+            if time.time() - time_begin > timeout:
+                break
 
         status = TestStatus.OK
         while True:
@@ -177,7 +192,17 @@ class TestRunner(object):
                 result.append((name, TestStatus.SKIPPED))
                 continue
 
-            actual_status = self.run_one(name, fast, timeout)
+            timeout_count = 2 if fast else 1
+            while timeout_count > 0:
+                actual_status = self.run_one(name, fast, timeout)
+                if actual_status == TestStatus.TIMEOUT:
+                    timeout_count -= 1
+                    self._close_ser()
+                    input("enter any key to continue:")
+                    self._open_ser()
+                else:
+                    break
+
             result.append((name, actual_status))
             if actual_status != expected_status and expected_status == TestStatus.OK:
                 failed = True
