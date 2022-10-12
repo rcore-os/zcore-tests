@@ -103,10 +103,8 @@ class TestRunner(object):
         self.thread_stop_flag = False
     
     def ser_reader(self):
-        while True:
-            if self.thread_stop_flag:
-                break
-            output = self.ser.read(self.ser.in_waiting or 1).decode()
+        while not self.thread_stop_flag:
+            output = self.ser.read(self.ser.in_waiting).decode()
             if output:
                 self.lk.acquire()
                 self.output += output
@@ -198,7 +196,7 @@ class TestRunner(object):
                 if actual_status == TestStatus.TIMEOUT:
                     timeout_count -= 1
                     self._close_ser()
-                    input("enter any key to continue:")
+                    input("press any key to continue:")
                     self._open_ser()
                 else:
                     break
