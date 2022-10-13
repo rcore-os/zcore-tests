@@ -142,7 +142,7 @@
 /libc-test/src/math/acos.exe                                                        OK
 /libc-test/src/math/acosf.exe                                                       OK
 /libc-test/src/math/acosh.exe                                                       FAILED
-/libc-test/src/math/acoshf.exe                                                      OK
+/libc-test/src/math/acoshf.exe                                                      PARTIAL
 /libc-test/src/math/acoshl.exe                                                      OK
 /libc-test/src/math/acosl.exe                                                       OK
 /libc-test/src/math/asin.exe                                                        OK
@@ -183,7 +183,7 @@
 /libc-test/src/math/erf.exe                                                         FAILED
 /libc-test/src/math/erff.exe                                                        FAILED
 /libc-test/src/math/erfl.exe                                                        OK
-/libc-test/src/math/exp10.exe                                                       OK
+/libc-test/src/math/exp10.exe                                                       PARTIAL
 /libc-test/src/math/exp10f.exe                                                      PARTIAL
 /libc-test/src/math/exp10l.exe                                                      OK
 /libc-test/src/math/exp2.exe                                                        FAILED
@@ -244,7 +244,7 @@
 /libc-test/src/math/lgammal_r.exe                                                   OK
 /libc-test/src/math/lgamma_r.exe                                                    FAILED
 /libc-test/src/math/llrint.exe                                                      FAILED
-/libc-test/src/math/llrintf.exe                                                     OK
+/libc-test/src/math/llrintf.exe                                                     PARTIAL
 /libc-test/src/math/llrintl.exe                                                     OK
 /libc-test/src/math/llround.exe                                                     PARTIAL
 /libc-test/src/math/llroundf.exe                                                    FAILED
@@ -282,7 +282,7 @@
 /libc-test/src/math/nexttoward.exe                                                  OK
 /libc-test/src/math/nexttowardf.exe                                                 OK
 /libc-test/src/math/nexttowardl.exe                                                 OK
-/libc-test/src/math/pow10.exe                                                       OK
+/libc-test/src/math/pow10.exe                                                       PARTIAL
 /libc-test/src/math/pow10f.exe                                                      PARTIAL
 /libc-test/src/math/pow10l.exe                                                      OK
 /libc-test/src/math/pow.exe                                                         OK
@@ -327,7 +327,7 @@
 /libc-test/src/math/tanhl.exe                                                       OK
 /libc-test/src/math/tanl.exe                                                        OK
 /libc-test/src/math/tgamma.exe                                                      OK
-/libc-test/src/math/tgammaf.exe                                                     OK
+/libc-test/src/math/tgammaf.exe                                                     PARTIAL
 /libc-test/src/math/tgammal.exe                                                     OK
 /libc-test/src/math/trunc.exe                                                       FAILED
 /libc-test/src/math/truncf.exe                                                      FAILED

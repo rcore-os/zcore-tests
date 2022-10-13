@@ -40,7 +40,7 @@ python linux_libc_test-board.py [-a <arch>] [-f] [-b <board>] [-D <dev>]
   # options:
   -a <arch>, --arch <arch>	# target architecture, can be : x86_64(default), riscv64, aarch64
   -f, --fast	# do not test known failed and timeout testcases
-  -b <board>, --board <board>	# board name, can be : d1(default), unmatched, visionfive, light
+  -b <board>, --board <board>	# board name, can be : nezha(default), unmatched, visionfive, light, cr1825
   -D <dev>, --device <dev>	# specify the device. default : /dev/ttyUSB0
   
 python linux_libc_test-board.py -t <testcase> [-a <arch>] [-b <board>] [-D <dev>]
