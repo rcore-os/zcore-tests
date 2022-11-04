@@ -8,6 +8,8 @@ from enum import Enum
 from .log import Logger
 import re
 import threading
+import os
+import signal
 
 class TestStatus(Enum):
     OK = "OK"
@@ -71,7 +73,7 @@ class TestRunner(object):
 
     def __del__(self):
         self.teardown()
-        self._stop_reader()
+        self.stop_qemu()
  
     def _start_reader(self):
         self.receiver_thread = threading.Thread(target=self.proc_reader)
@@ -82,7 +84,7 @@ class TestRunner(object):
         self.lk.acquire()
         self.thread_stop_flag = True
         self.lk.release()
-        self.receiver_thread.join()
+        self.receiver_thread.join(timeout=5)
         self.thread_stop_flag = False
     
     def proc_reader(self):
@@ -93,6 +95,7 @@ class TestRunner(object):
                 self.lk.acquire()
                 self.output += output
                 self.lk.release()
+        self.output = ""
 
     def build_cmdline(self):
         return None
@@ -119,17 +122,20 @@ class TestRunner(object):
     def run_qemu(self):
         cmdline = self.run_cmdline()
         self.zcore_proc = subprocess.Popen(cmdline, shell=True, stdin = subprocess.PIPE,
-                    stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+                    stdout=subprocess.PIPE, stderr=subprocess.STDOUT, start_new_session=True)
         self._start_reader()
-        self.logger.println("dbg run_qemu: wait shell")
-        while True:
+        for i in range(5):
             if re.search(r"/ #", self.output):
                 break
-            time.sleep(0.5)
+            time.sleep(2)
             self.zcore_proc.stdin.write('\n'.encode())
             self.zcore_proc.stdin.flush()
-        self.logger.println("dbg run_qemu: shell ok")
     
+    def stop_qemu(self):
+        self._stop_reader()
+        if self.zcore_proc.returncode is None:
+            os.killpg(os.getpgid(self.zcore_proc.pid), signal.SIGTERM)
+            self.zcore_proc.wait()
 
     def run_one(self, name: str, fast=False, timeout=None) -> TestStatus:
         cmdline = name + '\n'
@@ -177,9 +183,11 @@ class TestRunner(object):
             timeout_count = 2 if fast else 1
             while timeout_count > 0:
                 actual_status = self.run_one(name, fast, timeout)
-                if actual_status == TestStatus.TIMEOUT:
+                self.zcore_proc.poll()
+                if actual_status == TestStatus.TIMEOUT or self.zcore_proc.returncode is not None:
                     timeout_count -= 1
-                    input("press any key to continue:")
+                    self.stop_qemu()
+                    self.run_qemu()
                 else:
                     break
 

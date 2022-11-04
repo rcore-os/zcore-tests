@@ -19,7 +19,7 @@ TIMEOUT = 10
 FAILED_PATTERN = ["failed","ERROR","panicked"]
 
 class LinuxTestRunner(TestRunner):
-    BASE_CMD = "cd ../zCore && make MODE=release LINUX=1 TEST=1 ARCH=%s" % args.arch
+    BASE_CMD = "make -C ../zCore MODE=release LINUX=1 TEST=1 ARCH=%s" % args.arch
 
     def build_cmdline(self) -> str:
         return self.BASE_CMD
@@ -46,6 +46,7 @@ if __name__=='__main__':
         testcases = load_testcases(TEST_FILE)
         ok = runner.run_all(testcases, args.fast, TIMEOUT)
 
+    runner.stop_qemu()
     if not ok:
         sys.exit(-1)
     else:
