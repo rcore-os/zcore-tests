@@ -164,7 +164,7 @@ class TestRunner(object):
         else:
             self.logger.println_file_only(self.output)
         self.logger.println("  %s (%.3fs)\n" % (status.colored_name(), time_end - time_begin))
-        time.sleep(0.1)
+        time.sleep(0.5)
 
         return status
 
