@@ -16,7 +16,7 @@ TEST_FILE = "%s/%s.txt" % (TEST_DIR, TEST_NAME)
 LOG_OUTPUT = "linux_libc_test_%s.log" % TEST_NAME
 
 TIMEOUT = 10
-FAILED_PATTERN = ["failed","ERROR","panicked"]
+FAILED_PATTERN = ["failed","ERROR","Error","panicked","Hangup","Unknown signal"]
 
 class LinuxTestRunner(TestRunner):
     BASE_CMD = "make -C ../zCore MODE=release LINUX=1 TEST=1 ARCH=%s" % args.arch

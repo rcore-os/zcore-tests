@@ -73,7 +73,6 @@ class TestRunner(object):
 
     def __del__(self):
         self.teardown()
-        self.stop_qemu()
  
     def _start_reader(self):
         self.receiver_thread = threading.Thread(target=self.proc_reader)
@@ -91,11 +90,12 @@ class TestRunner(object):
         while not self.thread_stop_flag:
             output = self.zcore_proc.stdout.readline().decode()
             if output:
-                self.logger.print(output)
                 self.lk.acquire()
                 self.output += output
                 self.lk.release()
+        self.lk.acquire()
         self.output = ""
+        self.lk.release()
 
     def build_cmdline(self):
         return None
@@ -124,13 +124,19 @@ class TestRunner(object):
         self.zcore_proc = subprocess.Popen(cmdline, shell=True, stdin = subprocess.PIPE,
                     stdout=subprocess.PIPE, stderr=subprocess.STDOUT, start_new_session=True)
         self._start_reader()
+        time.sleep(5)
+        self.zcore_proc.stdin.write('\n'.encode())
+        self.zcore_proc.stdin.flush()
         for i in range(5):
-            if re.search(r"/ #", self.output):
+            if re.search("/ # \s", self.output):
                 break
-            time.sleep(2)
-            self.zcore_proc.stdin.write('\n'.encode())
-            self.zcore_proc.stdin.flush()
-    
+            time.sleep(0.1)
+        while self.output != "":
+            self.lk.acquire()
+            self.output = ""
+            self.lk.release()
+            time.sleep(0.1)
+
     def stop_qemu(self):
         self._stop_reader()
         if self.zcore_proc.returncode is None:
@@ -140,31 +146,40 @@ class TestRunner(object):
     def run_one(self, name: str, fast=False, timeout=None) -> TestStatus:
         cmdline = name + '\n'
         time_begin = time.time()
-
-        self.lk.acquire()
-        self.output = ""
-        self.lk.release()
         self.zcore_proc.stdin.write(cmdline.encode())
         self.zcore_proc.stdin.flush()
+        time.sleep(0.01)
+        self.zcore_proc.stdin.write("\n".encode())
+        self.zcore_proc.stdin.flush()
+        time.sleep(0.01)
 
         status = TestStatus.OK
         while True:
             if time.time() - time_begin > timeout:
                 status = TestStatus.TIMEOUT
                 break
-            if re.search(r"/ # ", self.output):
+            if re.search("/ # \s", self.output):
                 break
         time_end = time.time()
 
         if status != TestStatus.TIMEOUT:
             status = self.check_output(self.output)
 
-        if status != TestStatus.OK or not fast:
-            self.logger.println(colored(self.output, "magenta"))
-        else:
-            self.logger.println_file_only(self.output)
+        while self.output != "":
+            if status != TestStatus.OK or not fast:
+                self.logger.println(colored(self.output, "magenta"))
+            else:
+                self.logger.println_file_only(self.output)
+            self.lk.acquire()
+            self.output = ""
+            self.lk.release()
+            if status == TestStatus.TIMEOUT:
+                break
+            if time.time() - time_begin - timeout > 2:
+                break
+            time.sleep(0.1)
+                
         self.logger.println("  %s (%.3fs)\n" % (status.colored_name(), time_end - time_begin))
-        time.sleep(0.5)
 
         return status
 
@@ -180,12 +195,16 @@ class TestRunner(object):
                 result.append((name, TestStatus.SKIPPED))
                 continue
 
-            timeout_count = 2 if fast else 1
+            timeout_count = 2
             while timeout_count > 0:
                 actual_status = self.run_one(name, fast, timeout)
                 self.zcore_proc.poll()
                 if actual_status == TestStatus.TIMEOUT or self.zcore_proc.returncode is not None:
                     timeout_count -= 1
+                    if timeout_count > 0:
+                        self.logger.println("dbg : restart qemu, test twice")
+                    else:
+                        self.logger.println("dbg : restart qemu, run next testcase")
                     self.stop_qemu()
                     self.run_qemu()
                 else:
